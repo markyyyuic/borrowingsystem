@@ -100,17 +100,17 @@ export default {
 }
 
 .nav-bar {
-    position: relative;
-    display: flex;
-    flex-direction: column; 
-    background: rgba(238, 158, 215, 0.96);
-    width: 317px;
-    height: 100vh;
-    justify-content: flex-start; 
-    align-items: flex-start;
-    margin-right: 10px; 
-    right: 15.3%;
-    }
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background: rgba(238, 158, 215, 0.96);
+  width: 317px;
+  height: 100vh;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 10px;
+  left: 0; /* Updated to 'left' instead of 'right' */
+}
 
 img {
     margin-top: 20px;

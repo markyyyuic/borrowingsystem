@@ -109,7 +109,7 @@ export default {
     justify-content: flex-start; 
     align-items: flex-start;
     margin-right: 10px; 
-    right: 9.3%;
+    right: 15.3%;
     }
 
 img {

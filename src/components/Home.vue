@@ -29,7 +29,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Poppins:wght@800&display=swap');
 .background {
   position: relative;
-  background: url('../assets/background.png') center/cover;
+  background: url('../assets/background.png')  center/cover;
   height: 100vh;
   width: 100vw;
   overflow: hidden;

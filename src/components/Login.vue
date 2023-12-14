@@ -8,7 +8,7 @@
         <label for="admin-user">Username</label>
         <div class="input-container">
           <i class="bi bi-person personlogo"></i>
-          <input v-model="username" type="text" id="admin-user" placeholder="Enter admin username" required>
+          <input v-model="username" type="text" id="admin-user" placeholder="Enter admin username" required @keyup.enter="attemptLogin">
         </div>
       </div>
 
@@ -16,7 +16,7 @@
         <label for="admin-password">Password</label>
         <div class="input-container">
           <i class="bi bi-lock locklogo"></i>
-          <input v-model="password" type="password" id="admin-password" placeholder="Enter admin password" required>
+          <input v-model="password" type="password" id="admin-password" placeholder="Enter admin password" required @keyup.enter="attemptLogin">
         </div>
       </div>
 

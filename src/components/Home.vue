@@ -11,9 +11,14 @@
     <router-link to="/about">
     <div class="content">
       <button>GET STARTED</button>
-   
+
+      <router-link to="/login">
+      <a href="" class="admin-panel">Login as Admin</a>
+    </router-link>
     </div>
   </router-link>
+
+
    
 </div>
 
@@ -27,12 +32,39 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Poppins:wght@800&display=swap');
+
+.admin-dashboard {
+  text-align: center; /* Center the link text horizontally */
+  margin-top: 20px; /* Add some margin to separate it from other elements */
+}
+
+.content .admin-panel {
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  background: rgba(255, 128, 219, 0.75);
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+.admin-panel:hover {
+  background-color: lightpink;
+}
+
+.admin-dashboard a {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
 .background {
   position: relative;
   background: url('../assets/background.png')  center/cover;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+
 }
 
 
@@ -90,7 +122,7 @@
 }
 
 .background .content button:hover{
-  background: black;
+  background: lightpink;
 }
 
 

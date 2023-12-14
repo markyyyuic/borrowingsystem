@@ -72,7 +72,10 @@ export default {
 
 <style scoped>
 
-
+.container {
+  display: flex;
+  flex-direction: row; /* Ensure a horizontal layout */
+}
 
 .container .date {
   text-align: center;
@@ -109,7 +112,6 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
   margin-right: 10px;
-  left: 0; /* Updated to 'left' instead of 'right' */
 }
 
 img {

@@ -39,7 +39,7 @@ const getItemImage = (itemName) => {
 <template>
     <Panelboard />
     <div class="header-container">
-      <h1>Manage Tools</h1>
+      <h1>Manage Toolss</h1>
     </div>
     <div class="equipment-container">
       <div class="option-buttons">

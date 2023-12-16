@@ -221,7 +221,7 @@ font-weight: 700;
   font-weight: 400;
 }
 
-.user-drop-content, router-link {
+.user-drop-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;

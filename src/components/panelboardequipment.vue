@@ -2,8 +2,38 @@
 import Panelboard from './Panelboard.vue';
 
 const items = [
-  { name: 'Extension Wire', quantity: 2, status: 'Available' },
+  { name: 'Extension Wire', quantity: 2,  },
+  { name:  'HDMI', quantity: 1, },
+  { name:  'Projector', quantity: 1, },
+  { name:  'Crimping Tool', quantity: 1, },
+  { name:  'VGA to HDMI', quantity: 1, },
+  { name:  'G.Wire', quantity: 1, },
+  { name:  'Adapter', quantity: 1, },
+  { name:  'Long Tables', quantity: 1, },
+  { name:  'Clicker', quantity: 0, },
+  { name:  'Mac VGA', quantity: 1, },
+  { name:  'Puncher', quantity: 1, },
+  { name:  'Pen Table', quantity: 1, },
 ];
+
+const getItemImage = (itemName) => {
+  const defaultImagePath = '/tools/notavail.jpg'; // Replace with the path to your default image
+  const itemImageMap = {
+    'Extension Wire': '/tools/extensionwire.png',
+    'HDMI': '/tools/hdmi.png',
+    'Projector': '/tools/projector.png',
+    'Crimping Tool': '/tools/crimping.png',
+    'VGA to HDMI': '/tools/vgatohdmi.png',
+    'G.Wire': '/tools/Gwire.png',
+    'Adapter': '/tools/adapter.png',
+    'Long Tables': '/tools/longt.png',
+    'Clicker': defaultImagePath, // Add appropriate path or leave empty if no image
+    'Mac VGA': defaultImagePath, // Add appropriate path or leave empty if no image
+    'Puncher': '/tools/puncher.png',
+    'Pen Table': '/tools/pentablet.png',
+  };
+  return itemImageMap[itemName] || '';
+};
 </script>
 
 <template>
@@ -20,69 +50,14 @@ const items = [
   
       <div class="items-container">
         <div v-for="(item, index) in items" :key="index" class="items">
-          <img src="../assets/extensionwire.png" alt="">
+          <div class="image-wrapper">
+          <img :src="getItemImage(item.name)" alt="">
+          </div>
           <div class="item-details">
             <h1>{{ item.name }}</h1>
             <h2>QUANTITY: {{ item.quantity }}</h2>
-            <h3>Status: {{ item.status }}</h3>
           </div>
         </div>
-
-        <div v-for="(item, index) in items" :key="index" class="items">
-          <img src="../assets/extensionwire.png" alt="">
-          <div class="item-details">
-            <h1>{{ item.name }}</h1>
-            <h2>QUANTITY: {{ item.quantity }}</h2>
-            <h3>Status: {{ item.status }}</h3>
-          </div>
-        </div>
-
-        <div v-for="(item, index) in items" :key="index" class="items">
-          <img src="../assets/extensionwire.png" alt="">
-          <div class="item-details">
-            <h1>{{ item.name }}</h1>
-            <h2>QUANTITY: {{ item.quantity }}</h2>
-            <h3>Status: {{ item.status }}</h3>
-          </div>
-        </div>
-
-        <div v-for="(item, index) in items" :key="index" class="items">
-          <img src="../assets/extensionwire.png" alt="">
-          <div class="item-details">
-            <h1>{{ item.name }}</h1>
-            <h2>QUANTITY: {{ item.quantity }}</h2>
-            <h3>Status: {{ item.status }}</h3>
-          </div>
-        </div>
-
-        <div v-for="(item, index) in items" :key="index" class="items">
-          <img src="../assets/extensionwire.png" alt="">
-          <div class="item-details">
-            <h1>{{ item.name }}</h1>
-            <h2>QUANTITY: {{ item.quantity }}</h2>
-            <h3>Status: {{ item.status }}</h3>
-          </div>
-        </div>
-
-        <div v-for="(item, index) in items" :key="index" class="items">
-          <img src="../assets/extensionwire.png" alt="">
-          <div class="item-details">
-            <h1>{{ item.name }}</h1>
-            <h2>QUANTITY: {{ item.quantity }}</h2>
-            <h3>Status: {{ item.status }}</h3>
-          </div>
-        </div>
-
-        <div v-for="(item, index) in items" :key="index" class="items">
-          <img src="../assets/extensionwire.png" alt="">
-          <div class="item-details">
-            <h1>{{ item.name }}</h1>
-            <h2>QUANTITY: {{ item.quantity }}</h2>
-            <h3>Status: {{ item.status }}</h3>
-          </div>
-        </div>
-        
-        
       </div>
     </div>
   </template>
@@ -128,8 +103,7 @@ const items = [
   padding: 10px;
   background: #FFF9F9;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  height: 500px;
-  aspect-ratio: 1.32;
+  height: 75%;
 }
 
 .option-buttons {
@@ -155,32 +129,44 @@ const items = [
 .items-container {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px; /* Negative margin to counteract margin in items */
   overflow-y: auto;
-  max-height: 100%;
+  max-height: 80vh; /* Adjust the max-height according to your needs */
+  margin: -10px; /* Negative margin to counteract margin in items */
 }
 .items {
-  width: calc(18% - 20px);
+  flex-grow: 1;
+  width: calc(18% - 10px);
   height: 35.3%;
   flex-shrink: 0;
-  margin: 35px; /* Add margin for spacing */
+  margin: 15px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
- 
+  padding: 15px;
 }
 
-.items img {
+.items .image-wrapper {
+  
   border: 1px solid black;
   border-radius: 5px;
-  background: #F6D4D4;
+  width: 100px; 
+  height: 100px; 
+  overflow: hidden; 
 }
+
+.items .image-wrapper img {
+  width: 100%; 
+  height: 100%; 
+}
+
+
 
 .item-details h1, h2, h3 {
   font-size: 13px;
+  margin: 0; /* Remove default margin */
+  padding: 5px;
+  font-weight: 400;
 }
-
-
 
 
 

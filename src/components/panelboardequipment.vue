@@ -49,7 +49,7 @@ const getItemImage = (itemName) => {
       </div>
   
       <div class="items-container">
-        <div v-for="(item, index) in items" :key="index" class="items">
+        <div v-for="(item, index) in items" :key="index" class="items" onclick="highlightItems(this)">
           <div class="image-wrapper">
           <img :src="getItemImage(item.name)" alt="">
           </div>

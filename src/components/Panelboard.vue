@@ -73,8 +73,7 @@ export default {
 <style scoped>
 
 .container {
-  display: flex;
-  flex-direction: row; /* Ensure a horizontal layout */
+  width: 100%;
 }
 
 .container .date {
@@ -87,7 +86,8 @@ export default {
   left: 50%;
   position: absolute;
   margin-top: 35px;
-  left: 23%;
+  left: -23%;
+  width: 100%;
 }
 
 .container h2 {
@@ -103,20 +103,21 @@ export default {
 }
 
 .nav-bar {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  background: rgba(238, 158, 215, 0.96);
-  width: 317px;
-  height: 100vh;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-right: 10px;
-}
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    background: rgba(238, 158, 215, 0.96);
+    width: 317px;
+    height: 100vh;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    margin-right: 10px; 
+    right: 9.3%;
+    }
 
 img {
     margin-top: 20px;
-    width: 150px;
+    width: 50%; /* Adjust as needed */
     display: flex;
     align-items: center;
     justify-content: center;

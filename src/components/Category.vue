@@ -6,114 +6,17 @@
   </button>
   </router-link>
  
-
-  
-
-
-  
     <div class="item-wrapper">
-        <div class="items" onclick="highlightItems(this)">
-        <img src="../assets/extensionwire.png" alt="">
+        <div v-for="(item, index) in items" :key="index" class="items" onclick="highlightItems(this)">
+        <img :src="getItemImage(item.name)" alt="">
     <div class="item-details">
-        <h1> Extension Wire</h1>
-        <h2>QUANITY: 2</h2>
+        <h1>{{ item.name }}</h1>
+        <h2>{{ item.quantity }}</h2>
     
     </div>
 </div>
 
 
-<div class="items" onclick="highlightItems(this)">
-        <img src="../assets/hdmi.png" alt="">
-    <div class="item-details">
-        <h1>HDMI</h1>
-        <h2>QUANITY: 3</h2>
-    
-    </div>
-</div>
-
-
-
-
-<div class="items" onclick="highlightItems(this)">
-        <img src="../assets/projector.png" alt="">
-    <div class="item-details">
-        <h1>Projector</h1>
-        <h2>QUANITY: 1</h2>
-    
-    </div>
-</div>
-
-
-
-<div class="items" onclick="highlightItems(this)">
-        <img src="../assets/crimping.png" alt="">
-    <div class="item-details">
-        <h1>Crimping Tools</h1>
-        <h2>QUANITY: 1</h2>
-    
-    </div>
-</div>
-
-
-<!-- new added list -->
-<div class="items" onclick="highlightItems(this)">
-        <img src="../assets/vgatohdmi.png" alt="">
-    <div class="item-details">
-        <h1>VGA to HDMI</h1>
-        <h2>QUANITY: 1</h2>
-    
-    </div>
-</div>
-
-<div class="items" onclick="highlightItems(this)">
-        <img src="../assets/Gwire.png" alt="">
-    <div class="item-details">
-        <h1>G. WIRE</h1>
-        <h2>QUANITY: 1</h2>
-    
-    </div>
-</div>
-
-
-<div class="items" onclick="highlightItems(this)">
-        <img src="../assets/adapter.png" alt="">
-    <div class="item-details">
-        <h1>Adapter</h1>
-        <h2>QUANITY: 1</h2>
-    
-    </div>
-</div>
-
-
-<div class="items" onclick="highlightItems(this)">
-        <img src="../assets/longt.png" alt="">
-    <div class="item-details">
-        <h1>Long table</h1>
-        <h2>QUANITY: 1</h2>
-    
-    </div>
-</div>
-
-
-<div class="items" onclick="highlightItems(this)">
-        <img src="../assets/puncher.png" alt="">
-    <div class="item-details">
-        <h1>Puncher</h1>
-        <h2>QUANITY: 1</h2>
-    
-    </div>
-</div>
-
-
-
-<div class="items" onclick="highlightItems(this)">
-        <img src="../assets/pentablet.png" alt="">
-    <div class="item-details">
-        <h1>Pen Tablet</h1>
-        <h2>QUANITY: 1</h2>
-    
-    </div>
-</div>
 
 
  </div>
@@ -125,9 +28,42 @@
 
 </template>
 
-<script>
+<script setup>
+
+const items = [
+  { name: 'Extension Wire', quantity: 2,  },
+  { name:  'HDMI', quantity: 1, },
+  { name:  'Projector', quantity: 1, },
+  { name:  'Crimping Tool', quantity: 1, },
+  { name:  'VGA to HDMI', quantity: 1, },
+  { name:  'G.Wire', quantity: 1, },
+  { name:  'Adapter', quantity: 1, },
+  { name:  'Long Tables', quantity: 1, },
+  { name:  'Clicker', quantity: 0, },
+  { name:  'Mac VGA', quantity: 1, },
+  { name:  'Puncher', quantity: 1, },
+  { name:  'Pen Table', quantity: 1, },
+];
 
 
+const getItemImage = (itemName) => {
+  const defaultImagePath = '/tools/notavail.jpg'; // Replace with the path to your default image
+  const itemImageMap = {
+    'Extension Wire': '/tools/extensionwire.png',
+    'HDMI': '/tools/hdmi.png',
+    'Projector': '/tools/projector.png',
+    'Crimping Tool': '/tools/crimping.png',
+    'VGA to HDMI': '/tools/vgatohdmi.png',
+    'G.Wire': '/tools/Gwire.png',
+    'Adapter': '/tools/adapter.png',
+    'Long Tables': '/tools/longt.png',
+    'Clicker': defaultImagePath, // Add appropriate path or leave empty if no image
+    'Mac VGA': defaultImagePath, // Add appropriate path or leave empty if no image
+    'Puncher': '/tools/puncher.png',
+    'Pen Table': '/tools/pentablet.png',
+  };
+  return itemImageMap[itemName] || '';
+};
 
 </script>
 

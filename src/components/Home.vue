@@ -1,5 +1,6 @@
 
 <template>
+  
 <div class="background">
     <div class="logo-title">
       <img src="../assets/logoupdate.png" alt="">

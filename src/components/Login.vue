@@ -43,8 +43,8 @@ export default {
   },
   methods: {
     checkCredentials() {
-      const adminUser = 'admin';
-      const adminPass = 'admin123';
+      const adminUser = 'danny';
+      const adminPass = 'danny123';
 
       if (this.username === adminUser && this.password === adminPass) {
         this.showStyledPrompt('Login Successful', 'success');
@@ -86,7 +86,7 @@ export default {
    
       if (this.prompt.type === 'success') {
         setTimeout(() => {
-          this.$router.push({ path: 'Panelboard' });
+          this.$router.push({ path: 'maindashboards' });
         }, 2000);
       }
     },

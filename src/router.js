@@ -5,6 +5,9 @@ import About from './components/About.vue';
 import Login from './components/Login.vue';
 import Panelboard from './components/Panelboard.vue';
 import panelboardequipment from './components/panelboardequipment.vue';
+import maindashboard from './components/maindashboard.vue';
+import confirmation from './components/confirmation.vue';
+
 
 const routes = [
     { path: '/', component: Home },
@@ -13,6 +16,8 @@ const routes = [
     { path: '/login', component: Login, name: Login },
     { path: '/panelboard', component: Panelboard},
     { path: '/panelboardequipment', component: panelboardequipment},
+    { path: '/maindashboards', component: maindashboard},
+    { path: '/confirmation', component: confirmation},
 ];
 
 const router = createRouter({

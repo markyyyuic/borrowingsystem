@@ -17,7 +17,7 @@ const items = [
 ];
 
 const getItemImage = (itemName) => {
-  const defaultImagePath = '/tools/notavail.jpg'; // Replace with the path to your default image
+  const defaultImagePath = '/tools/notavail.jpg';
   const itemImageMap = {
     'Extension Wire': '/tools/extensionwire.png',
     'HDMI': '/tools/hdmi.png',
@@ -27,8 +27,8 @@ const getItemImage = (itemName) => {
     'G.Wire': '/tools/Gwire.png',
     'Adapter': '/tools/adapter.png',
     'Long Tables': '/tools/longt.png',
-    'Clicker': defaultImagePath, // Add appropriate path or leave empty if no image
-    'Mac VGA': defaultImagePath, // Add appropriate path or leave empty if no image
+    'Clicker': defaultImagePath, 
+    'Mac VGA': defaultImagePath, 
     'Puncher': '/tools/puncher.png',
     'Pen Table': '/tools/pentablet.png',
   };
@@ -43,13 +43,13 @@ const getItemImage = (itemName) => {
     </div>
     <div class="equipment-container">
       <div class="option-buttons">
-        <a href=""><i class='bx bx-plus-circle'></i>Add Equipment</a>
-        <a href=""><i class='bx bx-minus-circle'></i>Remove Equipment</a>
-        <a href=""><i class='bx bxs-edit-alt' ></i>Edit Equipment</a>
-      </div>
+      <a href="#" @onclick="addEquipment"><i class='bx bx-plus-circle'></i>Add Equipment</a>
+      <a href=""><i class='bx bx-minus-circle'></i>Remove Equipment</a>
+      <a href=""><i class='bx bxs-edit-alt' ></i>Edit Equipment</a>
+    </div>
   
       <div class="items-container">
-        <div v-for="(item, index) in items" :key="index" class="items" onclick="highlightItems(this)">
+        <div v-for="(item, index) in items" :key="index" class="items" onclick="highlight">
           <div class="image-wrapper">
           <img :src="getItemImage(item.name)" alt="">
           </div>
@@ -71,9 +71,9 @@ const getItemImage = (itemName) => {
   background: rgba(238, 158, 215, 0.96);
   border: 1px solid #000;
   position: absolute;
-  right: 200px;
-  top: 20%;
-  width: 60%;
+  right: 150px;
+  top: 15%;
+  width: 65%;
   padding: 10x;
   height: 30px;
 }
@@ -97,13 +97,16 @@ const getItemImage = (itemName) => {
   flex-direction: column;
   border: 1px solid #000;
   position: absolute;
-  right: 200px;
-  top: 24.1%;
-  width: 60%;
+  right: 150px;
+  top: 19.1%;
+  width: 65%;
   padding: 10px;
   background: #FFF9F9;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   height: 75%;
+  overflow-y: auto; 
+  overflow-x: hidden;
+
 }
 
 .option-buttons {
@@ -127,37 +130,37 @@ const getItemImage = (itemName) => {
 }
 
 .items-container {
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  max-height: 80vh; /* Adjust the max-height according to your needs */
-  margin: -10px; /* Negative margin to counteract margin in items */
+  width: 80vw;
+  max-height: 75vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  align-content: flex-start; /* Adjusted property */
+  border-radius: 10px;
+  padding: 25px;
+  justify-content: flex-start;
+
 }
 .items {
-  flex-grow: 1;
-  width: calc(18% - 10px);
-  height: 35.3%;
-  flex-shrink: 0;
-  margin: 15px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  text-align: center;
+  position: relative;
+  border-radius: 2px;
+  margin: 10px;
 }
 
-.items .image-wrapper {
-  
-  border: 1px solid black;
+.items img {
+  width: 80%;
+  height: 150px;
+  border: 1px solid #000;
+  background: #F6D4D4;
   border-radius: 5px;
-  width: 100px; 
-  height: 100px; 
-  overflow: hidden; 
+
 }
 
-.items .image-wrapper img {
-  width: 100%; 
-  height: 100%; 
-}
+
 
 
 

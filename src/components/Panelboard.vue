@@ -19,7 +19,7 @@
       <h1>Admin</h1>
       <img src="../assets/logoupdate.png" alt="">
       <div class="nav-menus">
-        <router-link to="/panelboard">
+        <router-link to="/maindashboards">
           <a href="">DASHBOARD</a>
         </router-link>
         <div class="dropdown" @click="toggleEquipmentDropdown">
@@ -95,8 +95,8 @@ export default {
   color: rgba(255, 106, 213, 0.75);
   font-family: Content;
   font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
+  font-style: bold;
+  font-weight: 700;
   left: 23%;
   margin-top: 10px;
   line-height: normal;

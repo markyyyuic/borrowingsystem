@@ -202,7 +202,8 @@ label {
 }
 
 .loginbutton:hover {
-  background: lightpink;
+  background: rgb(238, 201, 207);
+  color: rgb(89, 85, 85);
 }
 
 .styled-prompt {

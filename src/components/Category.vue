@@ -150,13 +150,15 @@ margin-top: 10px;
   background: #A49999;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   width: 258px;
-    height: 76px;
-    flex-shrink: 0;
-    left: 1050px;
+  height: 76px;
+  flex-shrink: 0;
+  left: 1050px;
+  transition: transform 0.2s ease-in-out;
 }
 
 .nextbtn:hover {
     background-color: grey;
+    
 
 }
 

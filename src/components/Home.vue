@@ -117,13 +117,16 @@
   width: 18%;
   cursor: pointer;
   text-transform: capitalize;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7)
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: transform 0.2s ease-in-out;
   
   
 }
 
 .background .content button:hover{
   background: lightpink;
+  color: rgb(70, 24, 66);
+  transform: scale(1.05);
 }
 
 

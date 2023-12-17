@@ -244,12 +244,14 @@
   color: rgba(61, 52, 52, 0.83);
   font-weight: 600;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
   padding: 10px; /* Adjusted padding */
+  transition: transform 0.2s ease-in-out;
 }
 
 .buttons1:hover {
   background-color: grey;
+  transform: scale(1.05);
+  
 }
   </style>
   

@@ -224,7 +224,7 @@ img {
  .user-setting-dropdown {
   position: relative;
   display: inline-block;
-  left: 80%;
+  left: 93%;
   top: -3em;
 }
 

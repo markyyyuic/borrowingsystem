@@ -23,7 +23,7 @@
           <a href="">DASHBOARD</a>
         </router-link>
         <div class="dropdown" @click="toggleEquipmentDropdown">
-          <a href="#">EQUIPMENTS <i class='bx bx-chevron-down'></i></a>
+          <a href="#" class="equip">EQUIPMENTS <i class='bx bx-chevron-down'></i></a>
           <div v-show="equipmentDropdownVisible" class="dropdown-content" ref="equipmentDropdown">
             <router-link to="/panelboardequipment">
               <a href="" class="left-align">Manage Tools</a>
@@ -160,17 +160,28 @@ img {
   width: 100%; 
   padding: 50px;
   color: #000;
-
-font-family: Cairo;
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  transition: transform 0.2s ease-in-out;
 }
+
+  .nav-menus a:hover  {
+    transform: scale(1.05);
+    color: white;
+  }
 
 .dropdown {
   position: relative;
   display: inline-block;
+  transition: transform 0.2s ease-in-out;
  
+}
+
+.dropdown .equip:hover a{
+  transform: scale(1.05);
+
 }
 
 .dropdown-content {
@@ -182,19 +193,20 @@ font-weight: 700;
   font-size: 20px;
   width: 250px;
   padding: 10px;
-  right: 0; /* Adjust as needed */
-  top: 100%; /* Position below the dropdown link */
+  right: 0; 
+  top: 100%; 
+  
 }
   .dropdown-content a {
     color: #fff; 
     display: block;
     padding: 10px;
     outline: none;
+    
   }
 
   .dropdown-content a:hover {
     background-color: #000; 
-   
   }
 
   .dropdown:hover .dropdown-content {
@@ -215,7 +227,7 @@ font-weight: 700;
 
 .user-setting-dropdown .admintext {
   color: rgba(249, 60, 195, 0.78);
-  font-family: Cambay;
+  font-family: 'Cambay', sans-serif;
   font-size: 27px;
   font-style: normal;
   font-weight: 400;
@@ -238,15 +250,18 @@ font-weight: 700;
 
 .user-drop-content a {
   color: black;
-  padding: 12px 10px;
+  padding: 10px 10px;
   text-decoration: none;
   display: block;
   font-size: 20px;
+  transition: transform 0.2s ease-in-out;
+  
 }
 
 .user-drop-content a:hover {
   background-color: #f1f1f1;
-
+  
+  transform: scale(1.05);
 }
 
 .left-align {

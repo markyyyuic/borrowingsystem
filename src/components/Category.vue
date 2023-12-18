@@ -21,9 +21,9 @@
 
  </div>
 
-
+ <RouterLink to="/confirmation">
     <button class="nextbtn">NEXT</button>
-
+  </RouterLink>
  </div>
 
 </template>
@@ -74,6 +74,7 @@ const getItemImage = (itemName) => {
   height: 100vh;
   width: 100vw;
   background: rgba(250, 195, 228, 0.96);
+  overflow: hidden;
 }
 
 .equip-bgm button {
@@ -140,7 +141,7 @@ margin-top: 10px;
 }
 
 .equip-bgm .nextbtn {
-  top: 3%;
+  top: 1%;
   position: relative;
   justify-content: center;
   align-items: center;

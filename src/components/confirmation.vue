@@ -1,5 +1,7 @@
 <template>
+    <RouterLink to="/category">
     <button ><i class='bx bx-arrow-back'></i>BACK</button>
+</RouterLink>
     <div class="container">
         
         <div class="confirmation-wrapper">
@@ -92,6 +94,7 @@ button:hover {
 
 
 .confirmation-wrapper {
+    top: 7.5%;
     position: absolute;
     margin-top: 5px;
     border-radius: 20px;
@@ -205,13 +208,13 @@ button:hover {
     font-size: 18px;
     color: #C34949;
     font-family: 'Inter' sans-serif;
-    top: 305px;
+    top: 280px;
     right: 50px;
 }
 
 .terms input {
     position: relative;
-    top: 320px;
+    top: 298px;
     right: 75px;
     display: flex;
 }

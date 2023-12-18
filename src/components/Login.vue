@@ -226,7 +226,10 @@ label {
   .styled-prompt.success {
     background-color: #4CAF50; 
     width: 25%;
-    height: 5%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .styled-prompt.error {

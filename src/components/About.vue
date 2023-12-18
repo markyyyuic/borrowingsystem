@@ -13,7 +13,7 @@
       </div>
 
       <div class="user-inputs">
-        <input type="text" id="uic-id" placeholder="Enter your ID" required>
+        <input type="text" id="uic-gender" placeholder="Gender" required>
       </div>
 
       <div class="user-inputs">
@@ -113,7 +113,7 @@
   .about-background {
     animation: transitionIn 0.59s;
     display: flex;
-    position: relative;
+    position: absolute;
     background: url('../assets/background.png') no-repeat;
     background-size: cover;
     background-position: center;
@@ -125,14 +125,14 @@
   
   .form-wrapper {
     margin-top: 55px;
-    width: 550px;
+    width: 35%;
     background: rgba(238, 158, 215, 0.78);
     text-align: center;
     color: #f4f1f1;
     border-radius: 10px;
     padding: 30px 40px;
     opacity: 98%;
-    height: 500px;
+    height: 20%;
     border-width: 1px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: relative;
@@ -156,9 +156,9 @@
     background: rgba(255, 255, 255, 0.54);
     position: relative;
     width: 100%;
-    height: 50px;
+    height: 8%;
     margin: 30px 0;
-    border-radius: 40px;
+    border-radius: 25px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   
@@ -166,11 +166,10 @@
   .user-inputs select {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.54);
+    border-radius: 25px;
     border: none;
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 40px;
     font-size: 16px;
     color: #100e0e;
     padding: 20px 45px 20px 20px;
@@ -187,40 +186,39 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    background: rgba(248, 247, 247, 0.888);
+
     border: none;
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 40px;
     font-size: 16px;
     color: #040404;
     padding: 10px;
     cursor: pointer;
   }
   
- .dropdown-content {
-    width: 100%;
-    display: none;
-    position: absolute;
-    top: calc(100% + 10px); /* Adjusted top position */
-    left: 0;
-    background: rgb(249, 249, 249);
-    background-color: #fcf9f9;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-top: none;
-    border-radius: 0 0 10px 10px;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    width: 100%;
-    color: black;
-    padding: 12px 20px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    cursor: pointer;
-  }
+  .dropdown-content {
+  width: 100%;
+  display: none;
+  position: absolute; /* Changed to absolute */
+  top: calc(100% + 5px); /* Adjusted top position, added some spacing */
+  left: 0;
+  background: rgb(249, 249, 249);
+  background-color: #fcf9f9;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  width: 100%;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
   
   .dropdown-content a:hover {
     background-color: #fcf9f9;
@@ -252,19 +250,21 @@
     position: relative;
     bottom: 2%;
     width: 50%;
-  height: auto; /* Remove fixed height */
-  background: rgba(252, 243, 243, 0.94);
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  font-size: 25px;
-  color: rgba(61, 52, 52, 0.83);
-  font-weight: 600;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 10px; /* Adjusted padding */
-  transition: transform 0.2s ease-in-out;
+    height: auto; /* Remove fixed height */
+    background: rgba(252, 243, 243, 0.94);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 25px;
+    color: rgba(61, 52, 52, 0.83);
+    font-weight: 700;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px; /* Adjusted padding */
+    transition: transform 0.2s ease-in-out;
+    font-family: 'Inter' sans-serif;
+    font-style: normal;
 }
 
 .buttons1:hover {

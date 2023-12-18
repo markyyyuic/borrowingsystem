@@ -9,7 +9,8 @@
         <a href="" class="text-admin" @click="toggleDropDown"><i class='bx bxs-user-circle admin-icon'></i>Admin</a>
         <div class="user-dropdown"  v-show="dropdownVisible" @click="closeDropdown"> 
           <a href="" class="left-align" >Settings</a>
-          <a href="" class="left-align">Sign Out</a>
+          <a href="" class="left-align"><RouterLink to="/login">Sign Out</RouterLink></a>
+
         </div>
       </div>
         <div class="nav-bar">

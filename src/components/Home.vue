@@ -9,15 +9,16 @@
 
     <h2>Welcome, User!</h2>
 
-    <router-link to="/about">
-    <div class="content">
-      <button>GET STARTED</button>
 
+    <div class="content">
+      <router-link to="/about">
+      <button>GET STARTED</button>
+    </router-link>
       <router-link to="/login">
       <a href="" class="admin-panel">Login as Admin</a>
     </router-link>
     </div>
-  </router-link>
+
 
 
    
@@ -35,9 +36,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Poppins:wght@800&display=swap');
 
 
+
+
 .admin-dashboard {
-  text-align: center; /* Center the link text horizontally */
-  margin-top: 20px; /* Add some margin to separate it from other elements */
+  text-align: center; 
+  margin-top: 20px; 
 }
 
 .content .admin-panel {
@@ -104,7 +107,7 @@
   color: #403636;
 }
 
-.background .content button {
+ button {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -114,8 +117,8 @@
   background: rgba(255, 128, 219, 0.75);
   margin: 10px;
   padding: 15px;
-  font-size: 2rem;
-  width: 18%;
+  font-size: 2em;
+  width: 100%;
   cursor: pointer;
   text-transform: capitalize;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -124,7 +127,7 @@
   
 }
 
-.background .content button:hover{
+ button:hover{
   background: lightpink;
   color: rgb(70, 24, 66);
   transform: scale(1.05);

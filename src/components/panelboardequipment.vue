@@ -155,18 +155,22 @@ html {
   position: relative;
   border-radius: 2px;
   margin: 10px;
+  cursor: pointer;
 }
 
 .items img {
   width: 80%;
   height: 150px;
   border: 1px solid #000;
-  background: #F6D4D4;
   border-radius: 5px;
 
 }
 
+.items img:hover {
+  border-radius: 4px;
+  border: 2px solid red;
 
+}
 
 
 
@@ -176,6 +180,11 @@ html {
   padding: 5px;
   font-weight: 400;
 }
+
+
+/* NAV-BOXES */
+
+
 
 
 

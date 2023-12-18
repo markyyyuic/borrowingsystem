@@ -45,6 +45,33 @@ const options = [
       </ul>
     </div>
 </div>
+
+<div class="box-1">
+  <div class="card">
+  <div class="front">
+    <h2>EQUIPMENT</h2>
+  </div>
+  <div class="back">
+    <p>Go to Equipment section where you can add, 
+      remove and edit equipments</p>
+  </div>
+</div>
+</div>
+
+
+<div class="box-2">
+  <div class="card2">
+  <div class="front2">
+    <h2>RECORDS</h2>
+  </div>
+  <div class="back2">
+    <p>You can see here the history of request 
+      and borrowed items</p>
+  </div>
+</div>
+</div>
+
+
 </template>
 
 <style scoped>
@@ -234,6 +261,147 @@ const options = [
   content: attr(data-percentage);
   position: relative;
   bottom: 20px;
+}
+
+
+/* BOX NAVIGATIONS */
+
+
+.box-1 {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  bottom: 10px; 
+  width: 20%; 
+  left: 23%;
+  height: 30%;
+  border-radius: 2rem;
+  align-items: center;
+ 
+}
+
+.box-1:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d ;
+  
+}
+
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+  border: 1px solid black;
+}
+
+.front {
+  background: rgba(226, 191, 242, 0.63);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #1A1111;
+  font-family: 'Cairo' sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+
+.back{
+  background: rgba(226, 191, 242, 0.63);
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  color: #1A1111;
+  font-family: 'Cairo' sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+/* box 2 */
+
+.box-2 {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  bottom: 10px; 
+  width: 20%; 
+  left: 50%;
+  height: 30%;
+  border-radius: 2rem;
+  align-items: center;
+ 
+}
+
+.box-2:hover > .card2 {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card2 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d ;
+  
+}
+
+.front2, .back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+  border: 1px solid black;
+}
+
+
+.front2 {
+  background: rgba(212, 209, 209, 0.61);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #1A1111;
+  font-family: 'Cairo' sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.back2 {
+  background: rgba(212, 209, 209, 0.61);
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  color: #1A1111;
+  font-family: 'Cairo' sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
 

@@ -87,10 +87,10 @@ const getItemImage = (itemName) => {
   color: #756767;
 }
 
-.equip-bgm img:hover {
-  background: rgb(57, 56, 56);
-  border-radius: 50px;
-  border-width: 9px;
+.equip-bgm .items:hover img {
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: red;
 
 }
 
@@ -140,7 +140,7 @@ margin-top: 10px;
 }
 
 .equip-bgm .nextbtn {
-  top: 3px;
+  top: 3%;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -149,16 +149,17 @@ margin-top: 10px;
   border: 1px solid rgba(0, 0, 0, 0.60);
   background: #A49999;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 258px;
-  height: 76px;
+  width: 15%;
+  height: 9%;
   flex-shrink: 0;
-  left: 1050px;
+  left: 72%;
   transition: transform 0.2s ease-in-out;
 }
 
 .nextbtn:hover {
-    background-color: grey;
-    
+    background-color: rgb(211, 205, 205);
+    transform: scale(1.05);
+
 
 }
 

@@ -219,8 +219,8 @@ label {
     color: #fff;
     font-weight: bold;
     z-index: 9999;
-    opacity: 0; /* Start with 0 opacity */
-    transition: opacity 0.10s ease-in-out; /* Apply transition for smooth fade-in/out */
+    opacity: 0; 
+    transition: opacity 0.10s ease-in-out; 
   }
 
   .styled-prompt.success {

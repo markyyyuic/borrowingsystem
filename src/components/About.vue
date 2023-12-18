@@ -96,25 +96,22 @@
 
 @keyframes transitionIn {
   from {
-    opacity: 0;
-    transform: rotateY(-1deg);
+    opacity: 1;
+    transform: translateX(0);
+    transform-origin: left;
   }
 
   to {
-    opacity: 1;
-    transform: rotateY(0);
+    opacity: 0;
+    transform: translateX(100%);
   }
   
 }
 
 
-html {
- width: 100%;
- height: 100%;
-}
 
   .about-background {
-    animation: transitionIn 0.5s;
+    animation: transitionIn 0.59s;
     display: flex;
     position: relative;
     background: url('../assets/background.png') no-repeat;
@@ -252,8 +249,9 @@ html {
   }
   
   .buttons1 {
-  margin-top: 5px;
-  width: 50%;
+    position: relative;
+    bottom: 2%;
+    width: 50%;
   height: auto; /* Remove fixed height */
   background: rgba(252, 243, 243, 0.94);
   border: none;

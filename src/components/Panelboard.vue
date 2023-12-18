@@ -1,234 +1,95 @@
 <template>
   <div class="container">
     <h2>Dashboard</h2>
-    <div class="date">
-      <p>{{ formattedDate }}</p>
-      <div class="user-setting-dropdown">
-        <a href="#" class="admintext" @click="toggleDropdown">
-          <i class='bx bxs-user-circle admin-icon'></i>Danny <i class='bx bx-chevron-down'></i>
-        </a>
-        <div class="user-drop-content" v-show="dropdownVisible" @click="closeDropdown">
-          <a href="#" class="left-align">Settings</a>
-          <router-link to="/login">
-            <a href="" class="left-align">Log Out</a>
-          </router-link>
+      <div class="date">
+        <p>{{ formattedDate }}</p>
+      </div>
+
+      <div class="user-setting">
+        <a href="" class="text-admin" @click="toggleDropDown"><i class='bx bxs-user-circle admin-icon'></i>Admin</a>
+        <div class="user-dropdown"  v-show="dropdownVisible" @click="closeDropdown"> 
+          <a href="" class="left-align" >Settings</a>
+          <a href="" class="left-align">Sign Out</a>
         </div>
       </div>
-    </div>
-    <div class="nav-bar">
-      <h1>Admin</h1>
-      <img src="../assets/logoupdate.png" alt="">
-      <div class="nav-menus">
-        <router-link to="/maindashboards">
-          <a href="">DASHBOARD</a>
-        </router-link>
-        <div class="dropdown" @click="toggleEquipmentDropdown">
-          <a href="#" class="equip">EQUIPMENTS <i class='bx bx-chevron-down'></i></a>
-          <div v-show="equipmentDropdownVisible" class="dropdown-content" ref="equipmentDropdown">
-            <router-link to="/panelboardequipment">
-              <a href="" class="left-align">Manage Tools</a>
-            </router-link>
-            <a href="#" class="left-align">Available List</a>
+        <div class="nav-bar">
+          <h1>ADMIN PANEL</h1>
+          <img src="../assets/logoupdate.png" alt="">
+
+          <div class="nav-menus">
+            <RouterLink to="/maindashboards">
+            <div class="items"><a href=""><i class='bx bxs-dashboard' ></i>DASHBOARD</a></div>
+          </RouterLink>
+            <div class="items">
+              <a href="" @click="toggleSubMenu"><i class='bx bxl-deviantart' ></i>EQUIPMENTS<i class='bx bx-chevron-down dropdown' ></i></a>
+              
+          
+              <div class="submenu" v-if="showSubMenu">
+                <RouterLink to="/panelboardequipment">
+                <a href="" class="sub-items"><i class='bx bxs-chevron-right'></i>Manage Tools</a>
+              </RouterLink>
+                <a href="" class="sub-items"><i class='bx bxs-chevron-right'></i>Available Items</a>
+              </div>
+            
+            </div>
+
+
+            <div class="items"><a href=""><i class='bx bx-edit' ></i>RECORDS</a></div>
           </div>
         </div>
-        <a href="#">RECORDS</a>
-      </div>
-    </div>
+ 
   </div>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
-  data() {
-    return {
-      formattedDate: "",
-      dropdownVisible: false,
-      equipmentDropdownVisible: false,
-    };
-  },
-  mounted() {
-    this.updateDate();
-  },
-  methods: {
-    updateDate() {
-      const currentDate = new Date();
-      const options = { weekday: "short", month: "short", day: "numeric", year: "numeric" };
-      this.formattedDate = currentDate.toLocaleDateString("en-US", options);
+    data() {
+        return {
+            showSubMenu: false,
+            formattedDate: "",
+            dropdownVisible: false,
+        };
     },
-    toggleDropdown() {
-      this.dropdownVisible = !this.dropdownVisible;
-      this.equipmentDropdownVisible = false;
+    methods: {
+            updateDate() {
+            const currentDate = new Date();
+            const options = { weekday: "short", month: "short", day: "numeric", year: "numeric" };
+            this.formattedDate = currentDate.toLocaleDateString('en-US', options);
+        },
+        toggleSubMenu(event) {
+            event.preventDefault();
+            this.showSubMenu = !this.showSubMenu;
+        },
+        toggleDropDown() {
+          event.preventDefault(); 
+          this.dropdownVisible = !this.dropdownVisible;
+        },
+        closeDropdown(){
+          this.dropdownVisible = false;
+        },
     },
-    closeDropdown() {
-      this.dropdownVisible = false;
-      this.equipmentDropdownVisible = false;
+    mounted() {
+        this.updateDate();
     },
-    toggleEquipmentDropdown() {
-      this.equipmentDropdownVisible = !this.equipmentDropdownVisible;
-    },
-  },
+    components: { RouterLink }
 };
+
 </script>
+
 
 <style scoped>
 
-
-
-.container {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  padding: 0;
-}
-
-.container .date {
-  text-align: center;
-  color: #352929;
-  font-family: 'Carme' sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  left: 50%;
-  position: absolute;
-  margin-top: 35px;
-  left: -20%;
-  width: 100%;
-}
-
-.container h2 {
-  position: absolute;
-  color: rgba(255, 106, 213, 0.75);
-  font-family: Content;
-  font-size: 24px;
-  font-style: bold;
-  font-weight: 700;
-  left: 24.2%;
-  margin-top: 10px;
-  line-height: normal;
-}
-
-.nav-bar {
-    position: relative;
-    display: flex;
-    flex-direction: column; 
-    background: rgba(238, 158, 215, 0.96);
-    width: 317px;
-    height: 100vh;
-    align-items: flex-start;
-    }
-
-img {
-    margin-top: 20px;
-    width: 50%; /* Adjust as needed */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.30);
-    border-radius: 50%;
-    border-width: 1rem;
-    position: relative;
-    left: 25%;
-    background: lightgray 50% / cover no-repeat;
-
-    
-}
-
-.nav-bar h1 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 30%;
-    margin-top: 20px;
-    color: rgba(19, 17, 18, 0.78);
-}
-
-.nav-menus {
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
-  margin-top: 20px;
-  width: 100%; 
-    
-  
-}
-
-.nav-menus a {
-  margin-bottom: 10px; 
-  text-decoration: none;
-  color: #000;
-  text-align: center; 
-  width: 100%; 
-  padding: 50px;
-  color: #000;
-  font-family: 'Cairo' sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  transition: transform 0.2s ease-in-out;
-}
-
-  .nav-menus a:hover  {
-    transform: scale(1.05);
-    color: white;
-  }
-
-.dropdown {
+/* sign-out area */
+.user-setting {
   position: relative;
   display: inline-block;
-  transition: transform 0.2s ease-in-out;
- 
-}
-
-.dropdown .equip:hover a{
-  transform: scale(1.05);
-
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: transparent;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  font-size: 20px;
-  width: 250px;
-  padding: 10px;
-  right: 0; 
-  top: 100%; 
-  
-}
-  .dropdown-content a {
-    color: #fff; 
-    display: block;
-    padding: 10px;
-    outline: none;
-    
-  }
-
-  .dropdown-content a:hover {
-    background-color: #000; 
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-    outline: none;
-  }
-
-
-
- /* user-settings */
-
- .user-setting-dropdown {
-  position: relative;
-  display: inline-block;
-  left: 93%;
+  left: 92.3%;
   top: -3em;
 }
 
-.user-setting-dropdown .admintext {
+.user-setting .text-admin {
   color: rgba(249, 60, 195, 0.78);
   font-family: 'Cambay' sans-serif;
   font-size: 27px;
@@ -236,9 +97,9 @@ img {
   font-weight: 400;
 }
 
-.user-drop-content {
+.user-dropdown {
   display: none;
-  position: absolute;
+  position: relative;
   background-color: #f9f9f9;
   min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -247,11 +108,11 @@ img {
   top: 100%;
 }
 
-.user-setting-dropdown:hover .user-drop-content {
+.user-setting:hover .user-dropdown {
   display: block;
 }
 
-.user-drop-content a {
+.user-dropdown a {
   color: black;
   padding: 10px 10px;
   text-decoration: none;
@@ -261,9 +122,8 @@ img {
   
 }
 
-.user-drop-content a:hover {
+.user-dropdown a:hover {
   background-color: #f1f1f1;
-  
   transform: scale(1.05);
 }
 
@@ -281,5 +141,153 @@ img {
   display: block;
 }
 
+
+
+/* end of signout area */
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0;
+    background: #FFF;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    overflow: hidden;
+  } 
+
+  /* SIDEBAR */
+  .nav-bar {
+    position: absolute;
+    background: pink;
+    width: 20%;
+    height: 100%;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    bottom: 0.2%;
+    background: rgba(238, 158, 215, 0.96);
+
+
+
+  }
+
+  .nav-bar h1 {
+    margin-top: 5%;
+    position: relative;
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgba(7, 7, 7, 0.94);
+    font-family: 'Poppins' sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    
+    
+  }
+
+  .nav-bar img {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 25%;
+    box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 50%;
+    border-width: 1rem;
+    background: lightgray 50% / cover no-repeat;
+  }
+    
+
+
+  .nav-menus {
+    position: relative;
+    margin-top: 30px;
+    left: 18%;
+  }
+
+  .nav-menus .items {
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .nav-menus .items a {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    line-height: 60px;
+
+  }
+
+  .nav-menus .items a:hover {
+    color: white;
+    transition: 0.3s ease;
+  }
+
+  .nav-menus .items a i {
+    margin-right: 15px;
+  }
+
+  .nav-menus .items a .dropdown  {
+    position: absolute;
+    margin: 10x;
+    transition: 0.3s ease;
+  }
+
+  .nav-menus .items a .sub-menu {
+    background: rgb(10, 2, 2);
+    
+
+  }
+
+  .nav-menus .items a .sub-menu a {
+    padding-left: 80px;
+  }
+
+  /* ENDING OF SIDEBAR */
+
+
+  /* container contents */
+  .container h2{
+  position: relative;
+  align-items: flex-start;
+  display: flex;
+  left: 22%;
+  color: rgba(255, 106, 213, 0.75);
+  font-family: 'Content' sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  
+}
+
+.container .date {
+  position: relative;
+  display: flex;
+  left: 23%;
+  color: rgb(0, 0, 0);
+  font-family: 'Carme' sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  align-items: flex-start;
+  height: 30px;
+
+}
 
 </style>

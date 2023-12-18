@@ -72,26 +72,27 @@ export default {
 
 <style scoped>
 
-html {
- width: 100%;
- height: 100%;
-}
+
 
 .container {
   width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  padding: 0;
 }
 
 .container .date {
   text-align: center;
   color: #352929;
-  font-family: Carme;
+  font-family: 'Carme' sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   left: 50%;
   position: absolute;
   margin-top: 35px;
-  left: -23%;
+  left: -20%;
   width: 100%;
 }
 
@@ -102,7 +103,7 @@ html {
   font-size: 24px;
   font-style: bold;
   font-weight: 700;
-  left: 23%;
+  left: 24.2%;
   margin-top: 10px;
   line-height: normal;
 }
@@ -114,10 +115,7 @@ html {
     background: rgba(238, 158, 215, 0.96);
     width: 317px;
     height: 100vh;
-    justify-content: flex-start; 
     align-items: flex-start;
-    margin-right: 10px; 
-    right: 9.3%;
     }
 
 img {
@@ -165,7 +163,7 @@ img {
   width: 100%; 
   padding: 50px;
   color: #000;
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo' sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;

@@ -93,7 +93,28 @@
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Poppins:wght@800&display=swap');
   
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateY(-1deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateY(0);
+  }
+  
+}
+
+
+html {
+ width: 100%;
+ height: 100%;
+}
+
   .about-background {
+    animation: transitionIn 0.5s;
     display: flex;
     position: relative;
     background: url('../assets/background.png') no-repeat;

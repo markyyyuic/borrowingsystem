@@ -64,6 +64,12 @@ const getItemImage = (itemName) => {
 
 
 <style scoped>
+
+html {
+ width: 100%;
+ height: 100%;
+}
+
 .header-container {
   display: flex;
   justify-content: left;

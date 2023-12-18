@@ -35,11 +35,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Poppins:wght@800&display=swap');
 
 
-html {
- width: 100%;
- height: 100%;
-}
-
 .admin-dashboard {
   text-align: center; /* Center the link text horizontally */
   margin-top: 20px; /* Add some margin to separate it from other elements */

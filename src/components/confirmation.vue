@@ -59,7 +59,7 @@
     background: rgba(238, 158, 215, 0.96);
     position: absolute;
     height: 100%;
-    width: 1550px;
+    width: 100%;
     box-sizing: border-box;
     max-width: 100%;
     flex-direction: column;

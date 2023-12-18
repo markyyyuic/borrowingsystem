@@ -224,13 +224,13 @@ img {
  .user-setting-dropdown {
   position: relative;
   display: inline-block;
-  left: 1000px;
-  bottom: 60px;
+  left: 80%;
+  top: -3em;
 }
 
 .user-setting-dropdown .admintext {
   color: rgba(249, 60, 195, 0.78);
-  font-family: 'Cambay', sans-serif;
+  font-family: 'Cambay' sans-serif;
   font-size: 27px;
   font-style: normal;
   font-weight: 400;

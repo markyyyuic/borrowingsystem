@@ -39,7 +39,7 @@ const getItemImage = (itemName) => {
 <template>
     <Panelboard />
     <div class="header-container">
-      <h1>Manage Toolss</h1>
+      <h1>Manage Tools</h1>
     </div>
     <div class="equipment-container">
       <div class="option-buttons">
@@ -87,7 +87,7 @@ html {
 .header-container h1 {
   margin: 0;
   color: #2C2121;
-  font-family: 'B612', sans-serif;
+  font-family: 'B612' sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -128,7 +128,7 @@ html {
   padding: 10px;
   margin: 0 10px;
   color: #302D2D;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter' sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;

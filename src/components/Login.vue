@@ -99,10 +99,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200&family=Jost:wght@100&display=swap');
 
 
-html {
- width: 100%;
- height: 100%;
-}
 
 .wallpaper {
   background: url('../assets/background.png') lightgray 50% / cover no-repeat;
@@ -120,15 +116,15 @@ html {
   border-radius: 8px;
   text-align: center;
   border: none;
-  width: 52vw;
-  height: 70vh;
+  width: 52%;
+  height: 70%;
   position: relative;
-  top: 4%;
+  top: 10%;
 }
 
 .wallpaper .wrapper-input img {
   position: relative;
-  width: 250px;
+  width: 30%;
   bottom: 33.8%;
   box-shadow:  0px 10px 15px -5px rgba(0, 0, 0, 0.26);
   border-radius: 50%;
@@ -137,7 +133,7 @@ html {
 
 .wrapper-input h1{
   color: #595454;
-  font: 65px;
+  font-size: 3em;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-weight: 700;
   line-height: normal;
@@ -149,8 +145,8 @@ html {
   font-size: 20px;
   text-align: center;
   position: relative;
-  top: -23%;
-  width: 25vw;
+  top: -6em;
+  width: 50%;
   left: 27%;
 }
 
@@ -198,7 +194,7 @@ label {
   padding: 10px;
   cursor: pointer;
   border-radius: 10px;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Jost' sans-serif;
   font-weight: 900;
   width: 10vw;
   height: 8vh;
@@ -230,7 +226,7 @@ label {
   .styled-prompt.success {
     background-color: #4CAF50; 
     width: 25%;
-    height: 10%;
+    height: 5%;
   }
 
   .styled-prompt.error {

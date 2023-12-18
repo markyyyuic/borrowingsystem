@@ -67,7 +67,7 @@ const options = [
     top: -30px;
     margin: 0;
     color: #000;
-    font-family: 'Mitr', sans-serif;
+    font-family: 'Mitr' sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -163,7 +163,7 @@ const options = [
     top: -30px;
     margin: 0;
     color: #000;
-    font-family: 'Mitr', sans-serif;
+    font-family: 'Mitr' sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -180,7 +180,7 @@ const options = [
 }
 
 .bars2 {
-    position: relative;
+  position: relative;
   margin: 0;
   padding: 0;
   display: inline-block;

@@ -289,7 +289,7 @@ const options = [
   height: 100%;
   width: 100%;
   position: relative;
-  transition: transform 1500ms;
+  transition: transform 2500ms;
   transform-style: preserve-3d ;
   
 }
@@ -360,7 +360,7 @@ const options = [
   height: 100%;
   width: 100%;
   position: relative;
-  transition: transform 1500ms;
+  transition: transform 2500ms;
   transform-style: preserve-3d ;
   
 }

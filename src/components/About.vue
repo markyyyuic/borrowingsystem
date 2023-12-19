@@ -50,9 +50,9 @@
         </div>
       </div>
 
-      <RouterLink to="/category">
-        <button class="buttons1">NEXT</button>
-      </RouterLink>
+     
+        <button @click="toCatergory" class="buttons1">NEXT</button>
+    
     </div>
   </div>
 </template>
@@ -86,6 +86,9 @@
       auth() {
         // Add your authentication logic here
       },
+      toCatergory(){
+        this.$router.push('/category');
+      }
     },
   };
   </script>
@@ -117,14 +120,14 @@
     background: url('../assets/background.png') no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     justify-content: center;
     align-items: center;
   }
   
   .form-wrapper {
-    margin-top: 55px;
+    margin-top: 5%;
     width: 35%;
     background: rgba(238, 158, 215, 0.78);
     text-align: center;
@@ -186,7 +189,6 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-
     border: none;
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0.2);
@@ -197,17 +199,17 @@
   }
   
   .dropdown-content {
-  width: 100%;
-  display: none;
-  position: absolute; /* Changed to absolute */
-  top: calc(100% + 5px); /* Adjusted top position, added some spacing */
-  left: 0;
-  background: rgb(249, 249, 249);
-  background-color: #fcf9f9;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-top: none;
-  border-radius: 0 0 10px 10px;
-  z-index: 1;
+    width: 100%;
+    display: none;
+    position: absolute; /* Changed to absolute */
+    top: calc(100% + 5px); /* Adjusted top position, added some spacing */
+    left: 0;
+    background: rgb(249, 249, 249);
+    background-color: #fcf9f9;
+   border: 2px solid rgba(0, 0, 0, 0.2);
+   border-top: none;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
 }
 
 .dropdown-content a {
@@ -226,15 +228,14 @@
   
   .show {
     display: block;
+
   }
   
   .dropbutton {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 100%;
-    background: transparent;
     border: none;
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0.2);
@@ -243,14 +244,14 @@
     color: #040404;
     padding: 10px 20px 10px 20px;
     cursor: pointer;
-    background: rgb(249, 249, 249);
+
   }
   
   .buttons1 {
     position: relative;
     bottom: 2%;
     width: 50%;
-    height: auto; /* Remove fixed height */
+    height: 10%; /* Remove fixed height */
     background: rgba(252, 243, 243, 0.94);
     border: none;
     outline: none;

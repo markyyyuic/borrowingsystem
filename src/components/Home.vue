@@ -1,138 +1,197 @@
-
 <template>
-  
-<div class="background">
-    <div class="logo-title">
+  <div class="background">
+
+    <div class="logo-text">
+      
+      
+    </div>
+
+    <div class="container">
       <img src="../assets/logoupdate.png" alt="">
-      <h1>OpenLab Borrowing System</h1>
     </div>
 
-    <h2>Welcome, User!</h2>
+    <h2>Open Lab Borrowing System</h2>
+    <h1>Welcome, User!</h1>
+    <div class="button-container">
 
-
-    <div class="content">
-      <router-link to="/about">
-      <button>GET STARTED</button>
-    </router-link>
-      <router-link to="/login">
-      <a href="" class="admin-panel">Login as Admin</a>
-    </router-link>
+      <button  @click="toAbout" class="white-bg">Get Started</button>
+      <button @click="toAdmin" class="pink-bg">Sign In as Admin</button>
     </div>
-
-
-
-   
-</div>
-
-
-
+  </div>
 </template>
 
-<script setup>
+
+<script>
+export default {
+   methods: {
+    toAbout(){
+      this.$router.push('/about');
+    },
+    toAdmin() {
+      this.$router.push('/login');
+    }
+   }
+}
+
 
 </script>
 
+
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Poppins:wght@800&display=swap');
 
-
-
-
-.admin-dashboard {
-  text-align: center; 
-  margin-top: 20px; 
-}
-
-.content .admin-panel {
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  background: rgba(255, 128, 219, 0.75);
-  border-radius: 5px;
-  padding: 5px;
-  font-weight: 400;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
-}
-
-.admin-panel:hover {
-  background-color: lightpink;
-}
-
-.admin-dashboard a {
-  font-size: 25px;
+.rt {
+  color: inherit;
   text-decoration: none;
-  color: white;
 }
+
+
+
 .background {
-  position: relative;
-  background: url('../assets/background.png')  center/cover;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-
-}
-
-
-.logo-title {
-  display: flex; 
-  align-items: center; 
-}
-
-.background img {
-  width: 8%;
-  margin: 15px;
-}
-
-.logo-title h1{
-  margin-left: 5px;
-  font-size: 20px;
-  color: #403636;
- 
-  
-}
-
-.background .content {
+  margin: 0;
+  position: absolute;
+  padding: 0;
+  background-image: linear-gradient(89.868deg, rgba(232, 111, 198, 0.85) 0%, rgba(226, 109, 194, 0.00) 100%), url('../assets/background.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  height: 80vh; /* Fill the entire height of the viewport */
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
-.background  h2 {
+.logo-text {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+}
+
+.container {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  left: 60%;
+  top: 25%;
+}
+
+.container img {
+  height: 15%;
+  margin: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
+  border-radius: 50%;
+
+
+
+}
+
+.logo-text h1 {
+  font-size: 1.5rem;
+  color: #FFFBFB;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Inter' sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 50px;
+}
+
+h2 {
+  position: relative;
+  display: flex;
+  color: #FFFBFB;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+  font-family: 'Readex Pro' sans-serif;
+  font-size: 3.0rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  justify-content: center;
+  align-items: center;
   text-align: left;
-  font-size: 70px;
-  margin-top: 30px;
-  margin-left: 67px;
-  color: #403636;
+  left: 16%;
+  bottom: 15%;
 }
 
- button {
+
+h1 {
+  position: relative;
+  display: flex;
+  color: #FFFBFB;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+  font-family: 'Readex Pro' sans-serif;
+  font-size: 3.0rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  left: -15%;
+  bottom: 2%;
+
+}
+
+
+.background .button-container {
+  position: relative;
   display: flex;
   justify-content: center;
-  text-align: center;
-  border: 0;
-  border-radius: 30px;
-  color: white;
-  background: rgba(255, 128, 219, 0.75);
-  margin: 10px;
-  padding: 15px;
-  font-size: 2em;
-  width: 100%;
-  cursor: pointer;
-  text-transform: capitalize;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  transition: transform 0.2s ease-in-out;
-  
+  align-items: center;
+  top: 15%;
+  right: 42%;
   
 }
 
- button:hover{
-  background: lightpink;
-  color: rgb(70, 24, 66);
+.button-container button {
+  margin: 20px;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  height: 7.5%;
+  width: 13rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+
+}
+
+.button-container .white-bg {
+  background: #FFF;
+  color: rgba(255, 62, 199, 0.96);
+  font-weight: 700;
+  font-family: 'Inter' sans-serif;
+  line-height: normal;
+  font-style: normal;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button-container .white-bg:hover{
+  background: rgba(255, 62, 199, 0.96);
+  transition: 0.5s;
+  color: #FFF;
   transform: scale(1.05);
 }
 
 
+.button-container .pink-bg {
+  background: rgba(255, 62, 199, 0.96);;
+  color: rgba(255, 255, 255, 0.96);
+  font-weight: 900;
+  font-family: 'Inter' sans-serif;
+  line-height: normal;
+  font-style: normal;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.button-container .pink-bg:hover{
+  background: #FFF;
+  transition: 0.5s;
+  color: rgba(255, 62, 199, 0.96);
+  transform: scale(1.05);
+}
 
 </style>
+

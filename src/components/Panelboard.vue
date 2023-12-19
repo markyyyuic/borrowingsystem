@@ -26,16 +26,15 @@
               
           
               <div class="submenu" v-if="showSubMenu">
-                <RouterLink to="/panelboardequipment">
-                <a href="" class="sub-items"><i class='bx bxs-chevron-right'></i>Manage Tools</a>
-              </RouterLink>
+                
+                <a href="" @click="toManageTools" class="sub-items"><i class='bx bxs-chevron-right'></i>Manage Tools</a>
+          
                 <a href="" class="sub-items"><i class='bx bxs-chevron-right'></i>Available Items</a>
               </div>
             
             </div>
-
-
             <div class="items"><a href=""><i class='bx bx-edit' ></i>RECORDS</a></div>
+             
           </div>
         </div>
  
@@ -70,6 +69,10 @@ export default {
         closeDropdown(){
           this.dropdownVisible = false;
         },
+        toManageTools(){
+          this.$router.push('/panelboardequipment');
+        }
+        
     },
     mounted() {
         this.updateDate();

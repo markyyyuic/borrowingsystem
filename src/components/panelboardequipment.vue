@@ -81,15 +81,15 @@ html {
   right: 150px;
   top: 15%;
   width: 65%;
-  padding: 10x;
-  height: 30px;
+  padding: 10px;
+  height: 2.5em;
 }
 
 .header-container h1 {
   margin: 0;
   color: #2C2121;
   font-family: 'B612' sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

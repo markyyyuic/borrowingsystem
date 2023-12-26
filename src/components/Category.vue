@@ -70,11 +70,10 @@ const getItemImage = (itemName) => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Poppins:wght@800&display=swap');
 
-html {
-  width: 100%;
-  height: 100%;
+body {
+height: 100%;
+width: 100%;
 }
-
 .equip-bgm {
   height: 100vh;
   width: 100vw;
@@ -165,6 +164,7 @@ margin-top: 10px;
   flex-shrink: 0;
   left: 72%;
   transition: transform 0.2s ease-in-out;
+  color: #FFF;
 }
 
 .nextbtn:hover {

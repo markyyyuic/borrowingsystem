@@ -1,22 +1,51 @@
-
 <script setup>
-import { RouterLink } from 'vue-router';
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
 const items = [
-    {name: 'Pen Tablet', quantity: 2},
-    {name: 'Adapter', quantity: 1},
-    {name: 'Projector', quantity: 1},
+  { name: 'Pen Tablet', quantity: 2 },
+  { name: 'Adapter', quantity: 1 },
+  { name: 'Projector', quantity: 1 },
 ];
 
+const checkboxChecked = ref(false);
+const showPrompt = ref(false);
+const showSuccessPrompt = ref(false);
+const router = useRouter();
 
 const getItemImage = (itemName) => {
-    const itemImageMap = {
+  const itemImageMap = {
     'Pen Tablet': '/tools/pentablet.png',
     'Projector': '/tools/projector.png',
     'Adapter': '/tools/adapter.png',
-};
-return itemImageMap[itemName] || ''
+  };
+  return itemImageMap[itemName] || '';
 };
 
+const handleConfirm = () => {
+  if (checkboxChecked.value) {
+    // Checkbox is checked, proceed with confirmation logic
+    console.log('Confirmation successful');
+
+    showSuccessPrompt.value = true;
+    checkboxChecked.value = false;
+
+    setTimeout(() => {
+        router.push('home');
+    }, 2000)
+  } else {
+    // Checkbox is not checked, show the prompt
+    showPrompt.value = true;
+  }
+};
+
+const closePrompt = () => {
+  showPrompt.value = false;
+};
+
+const closeSuccessPrompt = () => {
+  showSuccessPrompt.value = false;
+};
 </script>
 
 <template>
@@ -73,8 +102,26 @@ return itemImageMap[itemName] || ''
         </div>
 
         <div class="terms">
-            <input type="checkbox"><h1>I/We hereby acknowledged that I/we am/are responsible for any damage to and/or loss of equipment or injury to persons arising from its use. </h1>
+            <input v-model="checkboxChecked" type="checkbox"><h1>I/We hereby acknowledged that I/we am/are responsible for any damage to and/or loss of equipment or injury to persons arising from its use. </h1>
         </div>
+
+        <button @click="handleConfirm" class="confirm">Confirm</button>
+
+        <div class="overlay" v-if="showPrompt">
+            <div class="prompt">
+                <h2>NOTE!</h2>
+                <p>Please accept the terms before confirming.</p>
+                <button @click="closePrompt">OK</button>
+            </div>
+        </div>
+
+        <div class="success-overlay" v-if="showSuccessPrompt">
+        <div class="success-prompt">
+            <h2>Thank you!</h2>
+            <p>Your request has been successfully sent to the administrator.</p>
+            <button @click="closeSuccessPrompt">OK</button>
+        </div>
+    </div>
     </div>
 
 </template>
@@ -87,12 +134,117 @@ return itemImageMap[itemName] || ''
 <style scoped>
 
 
+body {
+height: 100%;
+width: 100%;
+
+}
+
+/* SUCCESS PROMPT */
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Ensure it's above the original overlay */
+}
+
+.success-prompt {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 13em;
+}
+
+.success-prompt h2 {
+    color: #333;
+}
+
+.success-prompt p {
+    margin: 10px 0;
+}
+
+.success-prompt button {
+    padding: 10px 20px;
+    background: #0F9D58; /* Change the background color as needed */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 46.5%
+}
+
+
+/* PROMPT  */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.prompt {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 13em;
+}
+
+.prompt h2 {
+    color: #333;
+}
+
+.prompt p {
+    margin: 10px 0;
+}
+
+.prompt button {
+    padding: 10px 20px;
+    background: #A49999;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 46%;
+}
+
+
 /* dummy datas of borrowed equipments */
 
 
-html {
-  width: 100%;
-  height: 100%;
+.confirm {
+    height: 8%;
+    width: 15%;
+    display: relative;
+    justify-content: center;
+    align-items: center;
+    right: 2em;
+    bottom: 2%;
+    border: 1px solid black;
+    background: #A49999;
+    border-radius: 25px;
+    transition: transform 0.2s ease-in-out;
+    color: #FFF;
+}
+
+.confirm:hover {
+    background-color: rgb(211, 205, 205);
+    transform: scale(1.05);
 }
 
 

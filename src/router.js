@@ -7,10 +7,11 @@ import Panelboard from './components/Panelboard.vue';
 import panelboardequipment from './components/panelboardequipment.vue';
 import maindashboard from './components/maindashboard.vue';
 import confirmation from './components/confirmation.vue';
+import Itemlist from './components/Itemlist.vue';
 
 
 const routes = [
-    { path: '/', component: Home },
+    { path: '/home', component: Home },
     { path: '/category', component: Category },
     { path: '/about', component: About },
     { path: '/login', component: Login, name: Login },
@@ -18,6 +19,7 @@ const routes = [
     { path: '/panelboardequipment', component: panelboardequipment},
     { path: '/maindashboards', component: maindashboard},
     { path: '/confirmation', component: confirmation},
+    { path: '/itemlist', component: Itemlist},
 ];
 
 const router = createRouter({

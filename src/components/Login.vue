@@ -99,6 +99,18 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200&family=Jost:wght@100&display=swap');
 
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    
+  }
+
+  to {
+    opacity: 1;
+   
+  }
+}
+
 html {
   width: 100%;
   height: 100%;

@@ -13,6 +13,7 @@ import Panelboard from './Panelboard.vue';
 
    <div class="content-item">
     <h2>LIST OF BORROWERS</h2>
+    
    </div>
 
  
@@ -24,7 +25,11 @@ import Panelboard from './Panelboard.vue';
 <style scoped>
 
 
+
+
+
 .item-header {
+
   display: flex;
   justify-content: left;
   align-items: center;
@@ -71,6 +76,12 @@ import Panelboard from './Panelboard.vue';
   overflow-y: auto; 
   overflow-x: hidden;
 
+}
+
+.content-item h2 {
+  margin: 10px;
+  top: 10px;
+  font-size: 1em;
 }
 
 </style>

@@ -65,6 +65,8 @@ const getItemImage = (itemName) => {
 
 <style scoped>
 
+
+
 html {
   width: 100%;
   height: 100%;
@@ -72,6 +74,7 @@ html {
 
 
 .header-container {
+
   display: flex;
   justify-content: left;
   align-items: center;
@@ -100,6 +103,7 @@ html {
 }
 
 .equipment-container {
+
   display: flex;
   flex-direction: column;
   border: 1px solid #000;

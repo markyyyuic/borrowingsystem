@@ -85,6 +85,21 @@ export default {
 
 <style scoped>
 
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    
+  }
+
+  to {
+    opacity: 1;
+   
+  }
+}
+
+
 html {
   width: 100%;
   height: 100%;
@@ -170,6 +185,8 @@ html {
 
   /* SIDEBAR */
   .nav-bar {
+  
+
     position: absolute;
     background: pink;
     width: 20%;

@@ -134,6 +134,7 @@ const closeSuccessPrompt = () => {
 <style scoped>
 
 
+
 body {
 height: 100%;
 width: 100%;
@@ -142,6 +143,7 @@ width: 100%;
 
 /* SUCCESS PROMPT */
 .success-overlay {
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -249,6 +251,7 @@ width: 100%;
 
 
 .container {
+
     margin: 0;
     padding: 0;
     background: rgba(238, 158, 215, 0.96);
@@ -264,6 +267,7 @@ width: 100%;
     
 }
  button{
+   
     position: absolute;
     margin: 0;
     padding: 0;

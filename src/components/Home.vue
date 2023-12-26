@@ -40,6 +40,9 @@ export default {
 
 <style scoped>
 
+
+
+
 .rt {
   color: inherit;
   text-decoration: none;
@@ -52,6 +55,7 @@ html {
 
 
 .background {
+
   margin: 0;
   position: absolute;
   padding: 0;
@@ -197,6 +201,9 @@ h1 {
   color: rgba(255, 62, 199, 0.96);
   transform: scale(1.05);
 }
+
+
+
 
 </style>
 

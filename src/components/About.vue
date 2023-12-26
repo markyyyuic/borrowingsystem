@@ -93,19 +93,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Poppins:wght@800&display=swap');
   
 
-@keyframes transitionIn {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-    transform-origin: left;
-  }
 
-  to {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  
-}
 
 html {
   width: 100%;
@@ -113,7 +101,6 @@ html {
 }
 
   .about-background {
-    animation: transitionIn 0.59s;
     display: flex;
     position: absolute;
     background: url('../assets/background.png') no-repeat;

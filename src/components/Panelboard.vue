@@ -27,13 +27,20 @@
           
               <div class="submenu" v-if="showSubMenu">
                 
-                <a href="" @click="toManageTools" class="sub-items"><i class='bx bxs-chevron-right arrowdown'></i>Manage Tools</a>
+                <a href="" @click="toManageTools" class="sub-items"><i class='bx bxs-chevron-right '></i>Manage Tools</a>
           
-                <a href="" class="sub-items"><i class='bx bxs-chevron-right'></i>Available Items</a>
+                <a href="" @click="toBorrowlist" class="sub-items"><i class='bx bxs-chevron-right'></i>Available Items</a>
               </div>
             
             </div>
-            <div class="items"><a href=""><i class='bx bx-edit' ></i>RECORDS</a></div>
+            <div class="items"><a href="" @click="toggleSubmenu2"><i class='bx bx-edit' ></i>RECORDS<i class='bx bx-chevron-down'></i></a>
+              <div class="submenu2" v-if="showSubMenu2">
+                <a href=""  class="sub-items2"><i class='bx bxs-chevron-right arrowdown'></i>Request List</a>
+                <a href="" @click="toManageRecords" class="sub-items2"><i class='bx bxs-chevron-right arrowdown'></i>Manage Records</a>
+              </div>
+            
+            
+            </div>
              
           </div>
         </div>
@@ -50,6 +57,7 @@ export default {
             showSubMenu: false,
             formattedDate: "",
             dropdownVisible: false,
+            showSubMenu2: false,
         };
     },
     methods: {
@@ -71,7 +79,21 @@ export default {
         },
         toManageTools(){
           this.$router.push('/panelboardequipment');
+        },
+        toBorrowlist(){
+          this.$router.push('/itemlist')
+        },
+        toggleSubmenu2(event) {
+          event.preventDefault();
+          this.showSubMenu2 = !this.showSubMenu2;
+        },
+        toManageRecords(){
+          this.$router.push('/borrowlist')
         }
+
+
+
+
         
     },
     mounted() {
@@ -240,11 +262,11 @@ html {
     color: black;
     font-size: 18px;
     text-decoration: none;
-    display: block;
     justify-content: center;
     align-items: center;
     padding: 10px;
     line-height: 60px;
+    display: block;
 
   }
 
@@ -263,6 +285,7 @@ html {
     position: absolute;
     margin: 10x;
     transition: 0.3s ease;
+    
   }
 
   .nav-menus .items a .sub-menu {
@@ -272,6 +295,18 @@ html {
   }
 
   .nav-menus .items a .sub-menu a {
+    padding-left: 80px;
+  }
+
+
+
+  .nav-menus .items a .sub-menu2 {
+    background: rgb(10, 2, 2);
+    
+
+  }
+
+  .nav-menus .items a .sub-menu2 a {
     padding-left: 80px;
   }
 

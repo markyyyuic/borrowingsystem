@@ -8,18 +8,22 @@ import panelboardequipment from './components/panelboardequipment.vue';
 import maindashboard from './components/maindashboard.vue';
 import confirmation from './components/confirmation.vue';
 import Itemlist from './components/Itemlist.vue';
+import borrowlist from './components/Borrowerslist.vue';
+import request from './components/requestforuser.vue';
 
 
 const routes = [
     { path: '/', component: Home },
     { path: '/category', component: Category },
     { path: '/about', component: About },
-    { path: '/login', component: Login, name: Login },
+    { path: '/login', component: Login},
     { path: '/panelboard', component: Panelboard},
     { path: '/panelboardequipment', component: panelboardequipment},
     { path: '/maindashboards', component: maindashboard},
     { path: '/confirmation', component: confirmation},
     { path: '/itemlist', component: Itemlist},
+    { path: '/borrowlist', component: borrowlist},
+    { path: '/request', component: request},
 ];
 
 const router = createRouter({

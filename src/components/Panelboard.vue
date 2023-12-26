@@ -27,7 +27,7 @@
           
               <div class="submenu" v-if="showSubMenu">
                 
-                <a href="" @click="toManageTools" class="sub-items"><i class='bx bxs-chevron-right'></i>Manage Tools</a>
+                <a href="" @click="toManageTools" class="sub-items"><i class='bx bxs-chevron-right arrowdown'></i>Manage Tools</a>
           
                 <a href="" class="sub-items"><i class='bx bxs-chevron-right'></i>Available Items</a>
               </div>
@@ -87,17 +87,6 @@ export default {
 
 
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    
-  }
-
-  to {
-    opacity: 1;
-   
-  }
-}
 
 
 html {
@@ -244,6 +233,7 @@ html {
     position: relative;
     cursor: pointer;
     align-items: center;
+  
   }
 
   .nav-menus .items a {
@@ -257,6 +247,8 @@ html {
     line-height: 60px;
 
   }
+
+ 
 
   .nav-menus .items a:hover {
     color: white;

@@ -5,7 +5,7 @@
     </div>
 
     <div class="request-container">
-        <h2>Pending Approval</h2>
+        <h2>Requests for Approval</h2>
         <div class="table">
         <table>
             <thead>

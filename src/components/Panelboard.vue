@@ -35,7 +35,7 @@
             </div>
             <div class="items"><a href="" @click="toggleSubmenu2"><i class='bx bx-edit' ></i>RECORDS<i class='bx bx-chevron-down'></i></a>
               <div class="submenu2" v-if="showSubMenu2">
-                <a href=""  class="sub-items2"><i class='bx bxs-chevron-right arrowdown'></i>Request List</a>
+                <a href="" @click="toRequestList" class="sub-items2"><i class='bx bxs-chevron-right arrowdown'></i>Request List</a>
                 <a href="" @click="toManageRecords" class="sub-items2"><i class='bx bxs-chevron-right arrowdown'></i>Manage Records</a>
               </div>
             
@@ -81,14 +81,17 @@ export default {
           this.$router.push('/panelboardequipment');
         },
         toBorrowlist(){
-          this.$router.push('/itemlist')
+          this.$router.push('/itemlist');
         },
         toggleSubmenu2(event) {
           event.preventDefault();
           this.showSubMenu2 = !this.showSubMenu2;
         },
         toManageRecords(){
-          this.$router.push('/borrowlist')
+          this.$router.push('/borrowlist');
+        },
+        toRequestList(){
+          this.$router.push('/request');
         }
 
 

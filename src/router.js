@@ -11,7 +11,7 @@ import Itemlist from './components/Itemlist.vue';
 
 
 const routes = [
-    { path: '/home', component: Home },
+    { path: '/', component: Home },
     { path: '/category', component: Category },
     { path: '/about', component: About },
     { path: '/login', component: Login, name: Login },

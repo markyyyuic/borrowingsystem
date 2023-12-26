@@ -31,7 +31,7 @@ const handleConfirm = () => {
     checkboxChecked.value = false;
 
     setTimeout(() => {
-        router.push('home');
+        router.push('/');
     }, 2000)
   } else {
     // Checkbox is not checked, show the prompt

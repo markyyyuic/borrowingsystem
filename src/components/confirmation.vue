@@ -233,8 +233,8 @@ width: 100%;
     display: relative;
     justify-content: center;
     align-items: center;
-    right: 2em;
-    bottom: 2%;
+    right: 2vw; /* Use vw unit for responsive positioning */
+    bottom: 2vh; /* Use vh unit for responsive positioning */
     border: 1px solid black;
     background: #A49999;
     border-radius: 25px;
@@ -383,7 +383,7 @@ button:hover {
     flex-direction: column;
     margin-left: auto;
     margin-right: 80px;
-    height: 58vh;
+    height: 56.5vh;
     width: 40vw;
     bottom: 80%;
 }
@@ -414,6 +414,8 @@ button:hover {
     justify-content: center;
     display: flex;
     align-items: center;
+    top: 47.6vh; 
+    right: 5vw; 
 }
 
 
@@ -439,13 +441,13 @@ button:hover {
 .pick-wrapper {
     justify-content: center;
     position: relative;
-    right: 43.3%;
     align-items: center;
     flex-wrap: wrap;
-    top: 61.9%;
-    height: 103.5%;
     background: lightgrey;
     width: 100%;
+    right: 14vw; /* Use vw unit for responsive positioning */
+    top: 15.9vh; /* Use vh unit for responsive positioning */
+    height: 20vh;
     
 }
 

@@ -75,6 +75,12 @@ const options = [
 </template>
 
 <style scoped>
+
+
+html {
+  width: 100%;
+  height: 100%;
+}
 .chart-container {
   position: absolute;
   height: 370px; /* Set a fixed height */

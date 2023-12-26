@@ -85,6 +85,12 @@ export default {
 
 <style scoped>
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
+
 /* sign-out area */
 .user-setting {
   position: relative;

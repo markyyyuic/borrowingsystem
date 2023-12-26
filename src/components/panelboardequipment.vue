@@ -13,7 +13,7 @@ const items = [
   { name:  'Clicker', quantity: 0, },
   { name:  'Mac VGA', quantity: 1, },
   { name:  'Puncher', quantity: 1, },
-  { name:  'Pen Table', quantity: 1, },
+  { name:  'Pen Tablet', quantity: 1, },
 ];
 
 const getItemImage = (itemName) => {
@@ -30,7 +30,7 @@ const getItemImage = (itemName) => {
     'Clicker': defaultImagePath, 
     'Mac VGA': defaultImagePath, 
     'Puncher': '/tools/puncher.png',
-    'Pen Table': '/tools/pentablet.png',
+    'Pen Tablet': '/tools/pentablet.png',
   };
   return itemImageMap[itemName] || '';
 };
@@ -66,9 +66,10 @@ const getItemImage = (itemName) => {
 <style scoped>
 
 html {
- width: 100%;
- height: 100%;
+  width: 100%;
+  height: 100%;
 }
+
 
 .header-container {
   display: flex;

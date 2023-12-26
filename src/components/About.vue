@@ -13,10 +13,6 @@
       </div>
 
       <div class="user-inputs">
-        <input type="text" id="uic-gender" placeholder="Gender" required>
-      </div>
-
-      <div class="user-inputs">
         <div class="dropdown">
           <button class="dropbutton" @click="toggleRoleDropdown">
             {{ selectedRole ? selectedRole : 'University Role' }} 
@@ -111,7 +107,10 @@
   
 }
 
-
+html {
+  width: 100%;
+  height: 100%;
+}
 
   .about-background {
     animation: transitionIn 0.59s;
@@ -127,7 +126,7 @@
   }
   
   .form-wrapper {
-    margin-top: 5%;
+    margin-top: 3%;
     width: 35%;
     background: rgba(238, 158, 215, 0.78);
     text-align: center;
@@ -135,7 +134,7 @@
     border-radius: 10px;
     padding: 30px 40px;
     opacity: 98%;
-    height: 20%;
+    height: 22%;
     border-width: 1px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: relative;
@@ -159,8 +158,8 @@
     background: rgba(255, 255, 255, 0.54);
     position: relative;
     width: 100%;
-    height: 8%;
-    margin: 30px 0;
+    height: 3.9em;
+    margin: 35px 0;
     border-radius: 25px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
@@ -181,6 +180,7 @@
   .dropdown {
     width: 100%;
     position: relative;
+    height: 3.9em;
   }
   
   .dropbutton {
@@ -199,18 +199,20 @@
   }
   
   .dropdown-content {
-    width: 100%;
-    display: none;
-    position: absolute; /* Changed to absolute */
-    top: calc(100% + 5px); /* Adjusted top position, added some spacing */
-    left: 0;
-    background: rgb(249, 249, 249);
-    background-color: #fcf9f9;
-   border: 2px solid rgba(0, 0, 0, 0.2);
-   border-top: none;
-    border-radius: 0 0 10px 10px;
-    z-index: 1;
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 5%; /* Position the dropdown content below the button */
+  left: 0;
+  background: rgb(249, 249, 249);
+  background-color: #fcf9f9;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  z-index: 1;
+  overflow: hidden;
 }
+
 
 .dropdown-content a {
   width: 100%;
@@ -239,7 +241,7 @@
     border: none;
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 40px;
+    border-radius: 25px;
     font-size: 16px;
     color: #040404;
     padding: 10px 20px 10px 20px;
@@ -249,9 +251,9 @@
   
   .buttons1 {
     position: relative;
-    bottom: 2%;
+    bottom: 3.5%;
     width: 50%;
-    height: 10%; /* Remove fixed height */
+    height: 10%;
     background: rgba(252, 243, 243, 0.94);
     border: none;
     outline: none;

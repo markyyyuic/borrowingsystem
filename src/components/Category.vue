@@ -70,11 +70,21 @@ const getItemImage = (itemName) => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Poppins:wght@800&display=swap');
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
 .equip-bgm {
   height: 100vh;
   width: 100vw;
   background: rgba(250, 195, 228, 0.96);
   overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .equip-bgm button {

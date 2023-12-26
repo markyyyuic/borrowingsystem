@@ -9,7 +9,8 @@
     <div class="container">
       <img src="../assets/logoupdate.png" alt="">
     </div>
-
+    
+   
     <h2>Open Lab Borrowing System</h2>
     <h1>Welcome, User!</h1>
     <div class="button-container">
@@ -44,6 +45,10 @@ export default {
   text-decoration: none;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+}
 
 
 .background {
@@ -109,7 +114,7 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: left;
-  left: 16%;
+  left: 9%;
   bottom: 15%;
 }
 
@@ -127,7 +132,7 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: left;
-  left: -15%;
+  left: -19%;
   bottom: 2%;
 
 }

@@ -76,17 +76,17 @@ export default {
           this.dropdownVisible = false;
         },
         toManageTools(){
-          router.push('/panelboardequipment');
+          this.$router.push('/panelboardequipment');
         },
         toBorrowlist(){
-          router.push('/itemlist');
+          this.$router.push('/itemlist');
         },
    
         toManageRecords(){
-          router.push('/borrowlist');
+          this.$router.push('/borrowlist');
         },
         toRequestList(){
-          router.push('/request');
+          this.$router.push('/request');
         },
         toggleSubmenu2(event) {
           event.preventDefault();

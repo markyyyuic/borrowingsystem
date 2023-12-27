@@ -43,8 +43,8 @@ export default {
   },
   methods: {
     checkCredentials() {
-      const adminUser = 'danny';
-      const adminPass = 'danny123';
+      const adminUser = 'demo';
+      const adminPass = 'demo123';
 
       if (this.username === adminUser && this.password === adminPass) {
         this.showStyledPrompt('Login Successful', 'success');

@@ -83,17 +83,17 @@ export default {
         toBorrowlist(){
           this.$router.push('/itemlist');
         },
-        toggleSubmenu2(event) {
-          event.preventDefault();
-          this.showSubMenu2 = !this.showSubMenu2;
-        },
+   
         toManageRecords(){
           this.$router.push('/borrowlist');
         },
         toRequestList(){
           this.$router.push('/request');
         },
-    
+        toggleSubmenu2(event) {
+          event.preventDefault();
+          this.showSubMenu2 = !this.showSubMenu2;
+        },
     },
     mounted() {
         this.updateDate();

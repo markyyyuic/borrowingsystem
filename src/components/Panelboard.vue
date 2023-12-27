@@ -1,64 +1,5 @@
-<script>
-import { RouterLink } from 'vue-router';
-import maindashboard from './maindashboard.vue';
-export default {
-    data() {
-        return {
-            showSubMenu: false,
-            formattedDate: "",
-            dropdownVisible: false,
-            showSubMenu2: false,
-        };
-    },
-    methods: {
-            updateDate() {
-            const currentDate = new Date();
-            const options = { weekday: "short", month: "short", day: "numeric", year: "numeric" };
-            this.formattedDate = currentDate.toLocaleDateString('en-US', options);
-        },
-        toggleSubMenu(event) {
-            event.preventDefault();
-            this.showSubMenu = !this.showSubMenu;
-        },
-        toggleDropDown() {
-          event.preventDefault(); 
-          this.dropdownVisible = !this.dropdownVisible;
-        },
-        closeDropdown(){
-          this.dropdownVisible = false;
-        },
-        toManageTools(){
-          this.$router.push('/panelboardequipment');
-        },
-        toBorrowlist(){
-          this.$router.push('/itemlist');
-        },
-        toggleSubmenu2(event) {
-          event.preventDefault();
-          this.showSubMenu2 = !this.showSubMenu2;
-        },
-        toManageRecords(){
-          this.$router.push('/borrowlist');
-        },
-        toRequestList(){
-          this.$router.push('/request');
-        },
-    
-    },
-    mounted() {
-        this.updateDate();
-    },
-    components: { RouterLink, maindashboard }
-};
-
-</script>
-
-
-
 <template>
- 
   <div class="container">
-    <maindashboard  />
     <h2>Dashboard</h2>
       <div class="date">
         <p>{{ formattedDate }}</p>
@@ -107,7 +48,60 @@ export default {
   </div>
 </template>
 
+<script>
+import { RouterLink } from 'vue-router';
 
+export default {
+    data() {
+        return {
+            showSubMenu: false,
+            formattedDate: "",
+            dropdownVisible: false,
+            showSubMenu2: false,
+        };
+    },
+    methods: {
+            updateDate() {
+            const currentDate = new Date();
+            const options = { weekday: "short", month: "short", day: "numeric", year: "numeric" };
+            this.formattedDate = currentDate.toLocaleDateString('en-US', options);
+        },
+        toggleSubMenu(event) {
+            event.preventDefault();
+            this.showSubMenu = !this.showSubMenu;
+        },
+        toggleDropDown() {
+          event.preventDefault(); 
+          this.dropdownVisible = !this.dropdownVisible;
+        },
+        closeDropdown(){
+          this.dropdownVisible = false;
+        },
+        toManageTools(){
+          this.$router.push('/panelboardequipment');
+        },
+        toBorrowlist(){
+          this.$router.push('/itemlist');
+        },
+        toggleSubmenu2(event) {
+          event.preventDefault();
+          this.showSubMenu2 = !this.showSubMenu2;
+        },
+        toManageRecords(){
+          this.$router.push('/borrowlist');
+        },
+        toRequestList(){
+          this.$router.push('/request');
+        },
+    
+    },
+    mounted() {
+        this.updateDate();
+    },
+    components: { RouterLink }
+};
+
+</script>
 
 
 <style scoped>

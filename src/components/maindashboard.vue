@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+import Panelboard from './Panelboard.vue';
 
 
 const options = [
@@ -33,10 +34,12 @@ const itemslist = [
   { name: '', percentage: 20 },
 ];
 
+
+
 </script>
 
 <template>
-
+  <Panelboard />
   <div class="chart-container">
     <div class="chart">
         <h1>Monthly Acquired Equipment</h1>
@@ -106,7 +109,7 @@ html {
   display: flex;
   height: 65%;
   width: 60%;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
+  
 
 
 
@@ -124,7 +127,7 @@ html {
   display: flex;
   height: 65%;
   width: 60%;
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.20);
+  
 
 }
 .box-2 .card2 .front2 h2 {

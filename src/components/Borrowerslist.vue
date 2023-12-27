@@ -1,6 +1,6 @@
 <script setup>
 import Panelboard from './Panelboard.vue';
-
+import { RouterLink } from 'vue-router';
 
 const users = [
   { id: 1111, name: "Mark Anthony Nisnea", year: "2nd Year", coursesection: "BSIT-2B", role: "Student" },

@@ -42,7 +42,7 @@
 
 <script setup>
 import Panelboard from './Panelboard.vue';
-
+import { RouterLink } from 'vue-router';
 
 const request = [
     {id: 1126, name: "JD Boy Saycon", year: "2nd Year", coursesection: "BSIT-2B", role: "Student", equipments: "HDMI x1, Projector x1" },

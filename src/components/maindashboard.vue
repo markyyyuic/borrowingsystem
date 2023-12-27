@@ -1,5 +1,5 @@
 <script setup>
-
+import { RouterLink } from 'vue-router';
 import Panelboard from './Panelboard.vue';
 
 const options = [
@@ -15,6 +15,22 @@ const options = [
   { name: 'Oct', percentage: 55 },
   { name: 'Nov', percentage: 10 },
   { name: 'Dec', percentage: 20 },
+];
+
+
+const itemslist = [
+  { name: 'HDMI', percentage: 80 },
+  { name: 'Projector', percentage: 40 },
+  { name: 'Clicker', percentage: 60 },
+  { name: 'G. Wire', percentage: 20 },
+  { name: 'Pen Tablet', percentage: 45 },
+  { name: 'MAC VGA', percentage: 80 },
+  { name: 'Long Table', percentage: 40 },
+  { name: 'VGA to HDMI', percentage: 85 },
+  { name: 'Crimping Tool', percentage: 45 },
+  { name: 'Installer', percentage: 55 },
+  { name: 'Puncher', percentage: 10 },
+  { name: '', percentage: 20 },
 ];
 
 </script>
@@ -38,9 +54,9 @@ const options = [
     <div class="chart2">
         <h1>Most Borrowed Equipment</h1>
       <ul class="bars2">
-        <li v-for="(option, index) in options" :key="index">
-          <div class="bar2" :style="{ height: option.percentage + '%', background: (index % 2 === 0) ? '#5395F8' : '#9F99A6' }"></div>
-          <span>{{ option.name }}</span>
+        <li v-for="(itemslist, index) in itemslist" :key="index">
+          <div class="bar2" :style="{ height: itemslist.percentage + '%', background: (index % 2 === 0) ? '#5395F8' : '#9F99A6' }"></div>
+          <span>{{ itemslist.name }}</span>
         </li>
       </ul>
     </div>
@@ -49,7 +65,7 @@ const options = [
 <div class="box-1">
   <div class="card">
   <div class="front">
-    <h2>EQUIPMENT</h2>
+    <h2><i class='bx bxs-wrench'></i>EQUIPMENT</h2>
   </div>
   <div class="back">
     <p>Go to Equipment section where you can add, 
@@ -62,7 +78,7 @@ const options = [
 <div class="box-2">
   <div class="card2">
   <div class="front2">
-    <h2>RECORDS</h2>
+    <h2><i class='bx bx-notepad'></i>RECORDS</h2>
   </div>
   <div class="back2">
     <p>You can see here the history of request 
@@ -226,7 +242,7 @@ html {
   border-bottom: 5px solid #747474;
   border-left: 5px solid #747474;
   padding: 10px;
-  bottom: 20px;
+  bottom: 30px;
 }
 
 .bars2 li {
@@ -234,15 +250,15 @@ html {
   width: 100px;
   height: 300px;
   position: relative;
-  
+
 }
 
 .bars2 span {
   width: 100%;
   position: absolute;
-  bottom: -10px;
+  bottom: -17px;
   text-align: center;
-  font-size: 10px;
+  font-size: 8.4px;
   right: 1px;
   
 }
@@ -282,7 +298,7 @@ html {
   justify-content: center;
   bottom: 10px; 
   width: 20%; 
-  left: 23%;
+  left: 38%;
   height: 30%;
   border-radius: 2rem;
   align-items: center;
@@ -353,7 +369,7 @@ html {
   justify-content: center;
   bottom: 10px; 
   width: 20%; 
-  left: 50%;
+  left: 63%;
   height: 30%;
   border-radius: 2rem;
   align-items: center;

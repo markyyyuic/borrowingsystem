@@ -26,9 +26,7 @@
               
           
               <div class="submenu" v-if="showSubMenu">
-                
                 <a href="" @click="toManageTools" class="sub-items"><i class='bx bxs-chevron-right '></i>Manage Tools</a>
-          
                 <a href="" @click="toBorrowlist" class="sub-items"><i class='bx bxs-chevron-right'></i>Available Items</a>
               </div>
             

@@ -65,7 +65,7 @@ const itemslist = [
 <div class="box-1">
   <div class="card">
   <div class="front">
-    <h2><img src="../assets/image 26.png" alt="">EQUIPMENT</h2>
+    <h2><img src="../assets/image26.png" alt="">EQUIPMENT</h2>
   </div>
   <div class="back">
     <p>Go to Equipment section where you can add, 
@@ -78,7 +78,7 @@ const itemslist = [
 <div class="box-2">
   <div class="card2">
   <div class="front2">
-    <h2><img src="../assets/image 27.png" alt="">RECORDS</h2>
+    <h2><img src="../assets/image27.png" alt="">RECORDS</h2>
   </div>
   <div class="back2">
     <p>You can see here the history of request 

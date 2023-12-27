@@ -92,12 +92,8 @@ export default {
         },
         toRequestList(){
           this.$router.push('/request');
-        }
-
-
-
-
-        
+        },
+    
     },
     mounted() {
         this.updateDate();

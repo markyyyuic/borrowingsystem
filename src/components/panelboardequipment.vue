@@ -34,6 +34,9 @@ const getItemImage = (itemName) => {
   };
   return itemImageMap[itemName] || '';
 };
+
+
+
 </script>
 
 <template>
@@ -43,7 +46,7 @@ const getItemImage = (itemName) => {
     </div>
     <div class="equipment-container">
       <div class="option-buttons">
-      <a href="#" @onclick="addEquipment"><i class='bx bx-plus-circle'></i>Add Equipment</a>
+      <a href="#" @click="addEquipment"><i class='bx bx-plus-circle'></i>Add Equipment</a>
       <a href=""><i class='bx bx-minus-circle'></i>Remove Equipment</a>
       <a href=""><i class='bx bxs-edit-alt' ></i>Edit Equipment</a>
     </div>
@@ -58,6 +61,18 @@ const getItemImage = (itemName) => {
             <h2>QUANTITY: {{ item.quantity }}</h2>
           </div>
         </div>
+
+        <div class="overlay" v-if="showPrompt">
+            <div class="prompt">
+                <h2>NOTE!</h2>
+                <label for="ItemName">Item Name:</label>
+                <input type="text">
+                <label for="date">Date Added:</label>
+                <button @click="closePrompt">OK</button>
+            </div>
+        </div>
+
+
       </div>
     </div>
   </template>

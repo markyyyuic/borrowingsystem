@@ -62,16 +62,6 @@ const getItemImage = (itemName) => {
           </div>
         </div>
 
-        <div class="overlay" v-if="showPrompt">
-            <div class="prompt">
-                <h2>NOTE!</h2>
-                <label for="ItemName">Item Name:</label>
-                <input type="text">
-                <label for="date">Date Added:</label>
-                <button @click="closePrompt">OK</button>
-            </div>
-        </div>
-
 
       </div>
     </div>

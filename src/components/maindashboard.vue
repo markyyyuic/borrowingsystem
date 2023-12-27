@@ -65,7 +65,7 @@ const itemslist = [
 <div class="box-1">
   <div class="card">
   <div class="front">
-    <h2><i class='bx bxs-wrench'></i>EQUIPMENT</h2>
+    <h2><img src="../assets/image 26.png" alt="">EQUIPMENT</h2>
   </div>
   <div class="back">
     <p>Go to Equipment section where you can add, 
@@ -78,7 +78,7 @@ const itemslist = [
 <div class="box-2">
   <div class="card2">
   <div class="front2">
-    <h2><i class='bx bx-notepad'></i>RECORDS</h2>
+    <h2><img src="../assets/image 27.png" alt="">RECORDS</h2>
   </div>
   <div class="back2">
     <p>You can see here the history of request 
@@ -99,6 +99,41 @@ html {
   width: 100%;
   height: 100%;
 }
+
+
+.box-1 .card .front h2 img {
+  position: relative;
+  display: flex;
+  height: 65%;
+  width: 60%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
+
+
+
+}
+
+.box-1 .card .front h2 {
+  font-size: 1.8em;
+  align-items: center;
+  display: flex;
+}
+
+
+.box-2 .card2 .front2 h2 img {
+  position: relative;
+  display: flex;
+  height: 65%;
+  width: 60%;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.20);
+
+}
+.box-2 .card2 .front2 h2 {
+  font-size: 1.8em;
+  align-items: center;
+  display: flex;
+}
+
+
 .chart-container {
  
   position: absolute;

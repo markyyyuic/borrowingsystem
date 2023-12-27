@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-import Panelboard from './Panelboard.vue';
+
 
 const options = [
   { name: 'Jan', percentage: 80 },
@@ -36,7 +36,7 @@ const itemslist = [
 </script>
 
 <template>
-  <Panelboard />
+
   <div class="chart-container">
     <div class="chart">
         <h1>Monthly Acquired Equipment</h1>

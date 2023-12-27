@@ -86,7 +86,7 @@ export default {
    
       if (this.prompt.type === 'success') {
         setTimeout(() => {
-          this.$router.push({ path: 'maindashboards' });
+          this.$router.push({ path: 'Panelboard' });
         }, 2000);
       }
     },

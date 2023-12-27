@@ -18,9 +18,9 @@
           <img src="../assets/logoupdate.png" alt="">
 
           <div class="nav-menus">
-            <RouterLink to="/maindashboards">
+            <router-link to="/maindashboards">
             <div class="items"><a href=""><i class='bx bxs-dashboard' ></i>DASHBOARD</a></div>
-          </RouterLink>
+          </router-link>
             <div class="items">
               <a href="" @click="toggleSubMenu"><i class='bx bxl-deviantart' ></i>EQUIPMENTS<i class='bx bx-chevron-down dropdown' ></i></a>
               

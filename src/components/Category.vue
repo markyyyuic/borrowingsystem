@@ -36,7 +36,7 @@ const items = [
   { name:  'Projector', quantity: 1, },
   { name:  'Crimping Tool', quantity: 1, },
   { name:  'VGA to HDMI', quantity: 1, },
-  { name:  'G.Wire', quantity: 1, },
+  { name:  'G.Wire', quantity: 1 , },
   { name:  'Adapter', quantity: 1, },
   { name:  'Long Tables', quantity: 1, },
   { name:  'Clicker', quantity: 0, },

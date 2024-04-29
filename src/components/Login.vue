@@ -8,7 +8,7 @@
         <label for="admin-user">Username</label>
         <div class="input-container">
           <i class="bi bi-person personlogo"></i>
-          <input v-model="username" type="text" id="admin-user" placeholder="Enter admin username" required @keyup.enter="attemptLogin">
+          <input v-model="admin_User" type="text" id="admin-user" placeholder="Enter admin username" required @keyup.enter="attemptLogin">
         </div>
       </div>
 
@@ -16,7 +16,7 @@
         <label for="admin-password">Password</label>
         <div class="input-container">
           <i class="bi bi-lock locklogo"></i>
-          <input v-model="password" type="password" id="admin-password" placeholder="Enter admin password" required @keyup.enter="attemptLogin">
+          <input v-model="admin_Password" type="password" id="admin-password" placeholder="Enter admin password" required @keyup.enter="attemptLogin">
         </div>
       </div>
 
@@ -29,11 +29,13 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
-      username: '',
-      password: '',
+      admin_User: '',
+      admin_Password: '',
       prompt: {
         visible: false,
         message: '',
@@ -42,57 +44,60 @@ export default {
     };
   },
   methods: {
-    checkCredentials() {
-      const adminUser = 'demo';
-      const adminPass = 'demo123';
+    attemptLogin() {
+      const formData = new FormData();
+      formData.append('admin_User', this.admin_User);
+      formData.append('admin_Password', this.admin_Password);
 
-      if (this.username === adminUser && this.password === adminPass) {
-        this.showStyledPrompt('Login Successful', 'success');
-      } else {
-        this.showStyledPrompt('Incorrect Password', 'error');
-       
-        this.password = '';
-      }
+      axios.post('http://127.0.0.1:8000/api/administrator/login/', formData)
+        .then(response => {
+          if (response.data) {
+            console.log("Success");
+            this.$router.push('/maindashboards');
+          } else {
+            console.log("error");
+            this.showStyledPrompt('Incorrect username or password', 'error');
+          }
+        })
+        .catch(error => {
+          console.error('Error during login:', error);
+          if (error.response && error.response.status === 401) {
+            this.showStyledPrompt('Incorrect username or password', 'error');
+          } else {
+            this.showStyledPrompt('An error occurred. Please try again later.', 'error');
+          }
+        });
     },
     showStyledPrompt(message, type) {
       this.prompt.message = message;
       this.prompt.type = type;
       this.prompt.visible = true;
 
-  
       this.$nextTick(() => {
-        this.$refs.styledPrompt.classList.add('fade-in');
+        if (this.$refs.styledPrompt) {
+          this.$refs.styledPrompt.classList.add('fade-in');
+        }
       });
 
-     
       setTimeout(() => {
         this.hideStyledPrompt();
-      }, 1000);
+      }, 3000);
     },
     hideStyledPrompt() {
-      
-      this.$refs.styledPrompt.classList.remove('fade-in');
-
-     
-      setTimeout(() => {
-        this.prompt.visible = false;
-      }, 500);
-    },
-    attemptLogin() {
-     
-      this.checkCredentials();
-
-      
-   
-      if (this.prompt.type === 'success') {
+      if (this.$refs.styledPrompt) {
+        this.$refs.styledPrompt.classList.remove('fade-in');
         setTimeout(() => {
-          this.$router.push({ path: 'maindashboards' });
-        }, 2000);
+          this.prompt.visible = false;
+        }, 500);
       }
-    },
+    }
   }
 };
 </script>
+
+
+
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');

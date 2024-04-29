@@ -1,6 +1,6 @@
 <template>
   <div class="about-background">
-    <div class="form-wrapper" :style="{ height: selectedRole === 'Student' ? '700px' : '600px' }">
+    <div class="form-wrapper" :style="{ height: selectedRole === 'Student' ? '650px' : '600px' }">
       <img src="../assets/logoupdate.png" alt="">
       <h1>Borrowing Form</h1>
 
@@ -95,10 +95,7 @@
 
 
 
-html {
-  width: 100%;
-  height: 100%;
-}
+
 
   .about-background {
     display: flex;
@@ -121,7 +118,7 @@ html {
     border-radius: 10px;
     padding: 30px 40px;
     opacity: 98%;
-    height: 22%;
+    height: 20%;
     border-width: 1px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: relative;
@@ -131,7 +128,7 @@ html {
     width: 30%;
     margin: 10px;
     position: absolute;
-    top: -100px;
+    top: -90px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -139,13 +136,14 @@ html {
   .form-wrapper h1 {
     margin-top: 50px;
     color: #403636;
+    bottom: 25%;
   }
   
   .user-inputs {
     background: rgba(255, 255, 255, 0.54);
     position: relative;
     width: 100%;
-    height: 3.9em;
+    height: 3.2em;
     margin: 35px 0;
     border-radius: 25px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -204,7 +202,7 @@ html {
 .dropdown-content a {
   width: 100%;
   color: black;
-  padding: 10px 20px;
+  padding: 5px 5px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -238,7 +236,7 @@ html {
   
   .buttons1 {
     position: relative;
-    bottom: 3.5%;
+    bottom: 2.5%;
     width: 50%;
     height: 10%;
     background: rgba(252, 243, 243, 0.94);

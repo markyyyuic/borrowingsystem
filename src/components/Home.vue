@@ -11,7 +11,7 @@
     </div>
    
    
-    <h2>Open Lab Borrowing System</h2>
+    <h2>Open Lab Borrowiasdsadng System</h2>
     <h1>Welcome, User!</h1>
     <div class="button-container">
 
